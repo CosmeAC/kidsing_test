@@ -2,6 +2,7 @@ import Login from './Login'
 import React, { useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import { useNavigate } from 'react-router-dom'; 
+import axios from 'axios';
 
 const CrearJugador = () => {
   const { user, isAuthenticated } = useAuth0();
@@ -19,19 +20,24 @@ const CrearJugador = () => {
       navigate('/login');
       return;
     }
-
-    // Enviar info al backen
-    try {
-      const response = await fetch('http://localhost:5000/CrearJugador', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          nombre: nombreJugador,
-          userId: user.sub, 
-        }),
+    
+    try { // Enviar info al backen
+      const response = await axios.post('http://localhost:5000/CrearJugador', {
+        nombre: nombreJugador,
+        userId: user.sub,
       });
+
+      // ---funciona
+      // const response = await fetch('http://localhost:5000/CrearJugador', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify({
+      //     nombre: nombreJugador,
+      //     userId: user.sub, 
+      //   }),
+      // });
 
       if (response.status === 200) {
         // Si la creación del jugador fue exitosa, redirige a la página deseada
@@ -49,9 +55,9 @@ const CrearJugador = () => {
       {isAuthenticated ? (
         <form onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="nombre">Nombre del Jugador:</label>
             <input
               type="text"
+              placeholder='Nombre del Jugador'
               id="nombre"
               name="nombre"
               value={nombreJugador}

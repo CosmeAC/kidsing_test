@@ -56,7 +56,6 @@ app.post('/CrearJugador', (req, res) => {
   // const auth0Id = req.user.sub; 
   // const { id, username, email } = req.body;
 
-
   const sql = 'INSERT INTO players (username, auth0_id) VALUES (?, ?)';
   const values = [nombre, userId]; // Utiliza el auth0_id como valor
 
@@ -80,6 +79,38 @@ app.post('/CrearJugador', (req, res) => {
     }
   });
 });
+
+// ---Enviar datos del jugadora  frontend
+app.get('/MostrarJugadors', (req, res) => {
+  const { userId } = req.body;
+
+  // const auth0Id = req.user.sub; 
+
+  // const { id, username, email } = req.body;
+
+  const sql = 'SELECT username FROM players WHERE auth0_id = ?';
+  const values = [userId]; // Utiliza el auth0_id como valor
+
+  // const sql = 'INSERT INTO players (username) VALUES (?)';
+  // const values = [nombre ]; // Utiliza el auth0_id como valor
+
+  dbConn.query(sql, values, (err, result) => {
+    if (err) {
+      console.error('Error al enviar jugador a Frontend: ', err);
+      res.status(500).json({ error: 'Error al enviar jugador a Frontend' });
+      return;
+    }else {
+      // No se insertó ni se actualizó ningún registro (tal vez no había cambios)
+      console.log("Api Jugadore enviado");
+         // ID del jugador insertado
+    const jugadorId = result.insertId;
+    
+    // Responde con el ID del jugador insertado
+    res.status(200).json({ jugadorId });
+    }
+  });
+});
+
 app.use('/', userRoutes)
 
 app.get('/', (req, res) => {
