@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.App{
+  background-color: rgb(0, 70, 211);
+}
+
+.Title h1{
+  color: rgb(5, 5, 5);
+}
+
+/*---------------------------HEADER-------------------------*/
+/* .Header-main{
+  background-color: rgb(0, 70, 211);
+  width: 100%;
+  height: 4.3rem;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  margin:0;
+  padding:0;
+} */
+
+/*---------------------------ABOUT---------------------------*/
+
+.about{
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  padding: 5% 10% 5% 18%;
+}
+
+
+/*---------------------------HOME---------------------------*/
+
+.home h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+#monosonriente{
+  width: 400px;
+  height: 300px;
+}
+
+
+/*---------------------------FOOTER-------------------------*/
+.Footer{
+  background-color:rgb(46, 211, 0);
+  width: 100%;
+  height: 4.3rem;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  margin:0;
+  padding:0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.home{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.home-items{
+  display: flex;
+  margin-top: 5%;
+  margin: 2%;
+}
+
+.team{
+  color: blue;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 3rem;
+  border: 1px solid black;
+  gap: 2%;
+
+}
+
+.about{
+  color: white;
+}
+
+/*-----------------TEAM---------------*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #f5f5f5;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em 1em;
+  text-align: center;
+  color: white;
+}
+.column {
+  width: 100%;
+  padding: 0.5em 0;
+}
+h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 3.5em;
+  color: #ffffff;
+}
+.card {
+  box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.1);
+  padding: 3.5em 1em;
+  border-radius: 0.6em;
+  color: #1f003b;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #ffffff;
+}
+.card .img-container {
+  width: 8em;
+  height: 8em;
+  background-color: #294ef5;
+  padding: 0.5em;
+  border-radius: 50%;
+  margin: 0 auto 2em auto;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 50%;
+}
+img.container{
+  object-fit: contain;
+}
+
+#eric{
+  height: 100%;
+  width: 130px;
+}
+
+.img-container{
+  object-fit: contain;
+}
+.card h3 {
+  font-weight: 500;
+}
+.card p {
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0.5em 0 2em 0;
+  letter-spacing: 2px;
+}
+.icons {
+  width: 50%;
+  min-width: 180px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.card a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.4em;
+}
+.card:hover {
+  background: linear-gradient(#411bff, #5126ff);
+  color: #ffffff;
+}
+.card:hover .img-container {
+  transform: scale(1.15);
+}
+@media screen and (min-width: 768px) {
+  section {
+    padding: 1em 7em;
+  }
+}
+@media screen and (min-width: 992px) {
+  section {
+    padding: 1em;
+  }
+  .card {
+    padding: 5em 1em;
+  }
+  .column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 0 1em;
+  }
+}
+
+
+/*---------------SECTION-1------------*/
+
+.esengmain{
+  display: flex;
+  border: 1px black;
+  height: 50px;
+  margin: 2%;
+}
+
+.section-container{
+  display: flex;
+  justify-content: center;
+  border: 1px white solid;
+  border-radius: 20px 20px 20px 20px;
+  background-color: white;
+  margin: 10%;
+}
+
+.A-O, .A-Z, .A-E{
+  display: flex;
+  flex-direction: row;
+  margin-top: 15%;
+  margin-bottom: 15%;
+  gap: 2%;
+}
+
+.vocals{
+  display: flex;
+  flex-direction: row;
+}
+
+
+#fsign{
+  height: 270px;
+}
+
+#gsign {
+  width: 400px;
+  height: 200px;
+}
+
+#ysign{
+  width: 250px;
+}
+
+#msign, #bsign, #esign, #ksign, #rsign, #wsign, #usign, #zsign{ 
+  height: 300px;
+
+}
+#psign{
+  width: 300px;
+  height: 200px;
+}
+#eightsign, #eight, #one, #onesign{
+  height: 243px;
+}
+
+
+/*-----------------SECTION NUMBERS ------------*/
+
+.section-numbers{
+  display: flex;
+  justify-content: center;
+  border: 1px white solid;
+  border-radius: 20px 20px 20px 20px;
+  background-color: white;
+  margin: 10%;
+}

@@ -1,0 +1,16 @@
+.Navbar {
+    background-color:rgb(46, 211, 0);
+    color: white;
+    height: 4.3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+  }
+
+#profile{
+  margin-right: 10%;
+}
+
+
