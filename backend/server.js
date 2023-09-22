@@ -4,6 +4,8 @@ const cors = require('cors');
 const userRoutes = require('./src/routes/user.routes')
 const app = express();
 
+const fs = require('fs'); // un modulo de node.js que sirve para manipular los archivos imagen
+
 const port = process.env.PORT || 5000;
 const dbConn = require('./config/db.config');
 
@@ -53,14 +55,10 @@ dbConn.query(sql, values, (err, result) => {
 // --- Crear un jugador
 app.post('/CrearJugador', (req, res) => {
   const { nombre, userId } = req.body;
-  // const auth0Id = req.user.sub; 
-  // const { id, username, email } = req.body;
+  const imagenBuffer = req.file.buffer; // la imagen esta por serparado por el cambio de formato a binario
 
-  const sql = 'INSERT INTO players (username, auth0_id) VALUES (?, ?)';
-  const values = [nombre, userId]; // Utiliza el auth0_id como valor
-
-  // const sql = 'INSERT INTO players (username) VALUES (?)';
-  // const values = [nombre ]; // Utiliza el auth0_id como valor
+  const sql = 'INSERT INTO players (username, auth0_id,imagen) VALUES (?, ?, ?)';
+  const values = [nombre, userId,imagenBuffer]; // Utiliza el auth0_id como valor
 
   // Ejecuta la consulta SQL para insertar el jugador
   dbConn.query(sql, values, (err, result) => {
