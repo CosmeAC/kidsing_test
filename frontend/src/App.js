@@ -11,6 +11,7 @@ import Games from './components/Games';
 import Officialpage from './components/Officialpage';
 import Sectionnumbers from './components/JuegoNumManoVideo/Sectionnumbers';
 import VSectionnumbers from './components/JuegoLetraManoVideo/VSectionnumbers';
+import SeleccionarPerfil from './components/SeleccionarPerfil';
 
 // import Webcam from "react-webcam";
 
@@ -56,6 +57,7 @@ useEffect(() => {
           <Route path="/Officialpage" element={<Officialpage />} />
           <Route path="/Sectionnumbers" element={<Sectionnumbers />} />
           <Route path="/VSectionnumbers" element={<VSectionnumbers />} />
+          <Route path='/SeleccionarPerfil' element={<SeleccionarPerfil />} />
           {isAuthenticated ? (
             <Route path="/CrearJugador" element={<CrearJugador />} />
             

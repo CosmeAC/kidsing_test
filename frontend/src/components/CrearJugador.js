@@ -3,13 +3,16 @@ import React, { useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import { useNavigate } from 'react-router-dom'; 
 import axios from 'axios';
-// import PerfilNetflix from './selccionarPerfil'
+import { image } from '@tensorflow/tfjs';
+
+// import elefanteImage from '../assets/avatar/elefante2.png';
+
 
 const CrearJugador = () => {
   const { user, isAuthenticated } = useAuth0();
-
   const [nombreJugador, setNombreJugador,] = useState('');
-  const [selectedImage, setSelectedImage] = useState('../assets/avatar/elefante2.png');
+  const [selectedImage, setSelectedImage] = useState('/avatar/elefante2.png');
+  // ../assets/avatar/elefante2.png
 
   const navigate = useNavigate(); 
 
@@ -58,12 +61,12 @@ const CrearJugador = () => {
                 onClick={() => handleImagenPerfilChange('../assets/avatar/elefante2.png')}
               />
           <img
-                src="../assets/avatar/erizo.jpg"
+                src={require('../assets/avatar/erizo.jpg')}
                 alt="Erizo"
                 onClick={() => handleImagenPerfilChange('../assets/avatar/erizo.jpg')}
               />
 
-          <img src={selectedImage} alt="Previsualización de la imagen" id="image-preview" />
+          <img src= {require(selectedImage)} alt="Previsualización de la imagen" id="image-preview" />
 
           {/* {imagenPreview && (
             <img className="imagen-perfil" src={imagenPreview} alt="Vista previa de la imagen de perfil" />

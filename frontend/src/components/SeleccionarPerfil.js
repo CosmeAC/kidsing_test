@@ -1,9 +1,8 @@
-import { useState } from 'react';
-  const PerfilNetflix  = ({ handleImagenPerfilChange }) => {
+import { Link } from 'react-router-dom';
+
+  const SeleccionarPerfil  = ({ handleImagenPerfilChange }) => {
     const imagenes = [
-      '../assets/avatar/elefante2.png',
-      '../assets/avatar/erizo.jpg',
-      // Agrega aquí las URL de las otras imágenes disponibles
+
     ];
   
     const handleSeleccionImagen = (imagen) => {
@@ -20,8 +19,14 @@ import { useState } from 'react';
             onClick={() => handleSeleccionImagen(imagen)}
           />
         ))}
+        {/* <div> */}
+        <Link to="/games">
+          <button>Ir a Juegos</button>
+        </Link>
+        {/* </div> */}
       </div>
+        
     );
   };
 
-export default PerfilNetflix;
+export default SeleccionarPerfil;

@@ -79,14 +79,17 @@ app.post('/CrearJugador', (req, res) => {
 });
 
 // ---Enviar datos del jugadora  frontend
-app.get('/MostrarJugadors', (req, res) => {
-  const { userId } = req.body;
+app.get('/MostrarJugadors/:userId', (req, res) => {
+  const userId = req.params.userId; // user id del auth0 del usuario que esta en la web
+
+// app.get('/MostrarJugadors', (req, res) => {
+//   const { userId } = req.body;
 
   // const auth0Id = req.user.sub; 
 
   // const { id, username, email } = req.body;
 
-  const sql = 'SELECT username FROM players WHERE auth0_id = ?';
+  const sql = 'SELECT username,imagen FROM players WHERE auth0_id = ?';
   const values = [userId]; // Utiliza el auth0_id como valor
 
   // const sql = 'INSERT INTO players (username) VALUES (?)';
