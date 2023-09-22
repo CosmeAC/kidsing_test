@@ -1,0 +1,142 @@
+/* .header-op{
+        background-color:rgb(46, 211, 0);
+        color: white;
+        height: 4.3rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2%;
+} */
+
+.Main-container{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(253, 223, 91)
+}
+
+#monolengua{
+height: 50px;
+width: 50px;
+}
+
+.Sidebar{
+    border: 1px rgb(161, 161, 161) solid;
+    width: 20%;
+}
+
+.Main-Sections-Container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px rgb(167, 167, 167) solid;
+    width: 80%;
+}
+
+.section-vocals{
+    display: flex;
+    margin-top: 2%;
+    border: rgb(46, 211, 0) solid;
+    border-radius: 40px 40px 40px 40px;
+    background-color: rgb(46, 211, 0);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    height: 60px;
+    width: 60%;
+    font-size:xx-large;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-letters{
+    display: flex;
+    border: rgb(0, 199, 206) solid;
+    border-radius: 40px 40px 40px 40px;
+    background-color: rgb(0, 199, 206);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    height: 60px;
+    width: 60%;
+    font-size:xx-large;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-number{
+    display: flex;
+    border: rgb(190, 128, 226) solid;
+    border-radius: 40px 40px 40px 40px;
+    background-color: rgb(190, 128, 226);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    height: 60px;
+    width: 60%;
+    font-size:xx-large;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.vocal-path{
+    display: flex;
+    column-gap: 30%;
+}
+
+.btnlist{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    /* column-gap: 20%; */
+    padding: 50px;
+
+}
+
+.btn, .btn1, .btn2, .btn3, .btn4 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+    margin: 20%;
+    border: 1px solid rgb(46, 211, 0);
+    background-color:rgb(46, 211, 0); ;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+#star, #puzzle, #party, #aslhand{
+    height: 80%;
+    width: auto;
+}
+
+.btnA, .btnA1, .btnA2, .btnA3, .btnA4 {
+    display: flex;
+    margin: 20%;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+    border: 1px solid rgb(0, 199, 206);
+    background-color: rgb(0, 199, 206);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.btn01, .btn11, .btn22, .btn33, .btn44 {
+    display: flex;
+    margin: 20%;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+    border: 1px solid rgb(190, 128, 226);
+    background-color:rgb(190, 128, 226);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+

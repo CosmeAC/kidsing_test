@@ -4,7 +4,7 @@ import SectionFJ from './SectionFJ';
 import SectionKO from './SectionKO';
 import SectionPT from './SectionPT';
 import SectionUZ from './SectionUZ';
-import Sectionnumbers from './Sectionnumbers';
+import Sectionnumbers from './JuegoNumManoVideo/Sectionnumbers';
 import Login from './Login';
 
 const Games = () => {

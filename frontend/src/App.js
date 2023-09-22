@@ -8,6 +8,9 @@ import { useAuth0 } from '@auth0/auth0-react';
 import axios from 'axios';
 import Avatar from './components/Avatar';
 import Games from './components/Games';
+import Officialpage from './components/Officialpage';
+import Sectionnumbers from './components/JuegoNumManoVideo/Sectionnumbers';
+import VSectionnumbers from './components/JuegoLetraManoVideo/VSectionnumbers';
 
 // import Webcam from "react-webcam";
 
@@ -50,6 +53,9 @@ useEffect(() => {
           <Route path="/" element={<Main />} />
           <Route path="/Avatar" element={<Avatar />} />
           <Route path="/Games" element={<Games />} />
+          <Route path="/Officialpage" element={<Officialpage />} />
+          <Route path="/Sectionnumbers" element={<Sectionnumbers />} />
+          <Route path="/VSectionnumbers" element={<VSectionnumbers />} />
           {isAuthenticated ? (
             <Route path="/CrearJugador" element={<CrearJugador />} />
             
