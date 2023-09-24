@@ -1,18 +1,18 @@
 import React, {useState} from 'react';
-import F from '../assets/letters/F.png';
-import fsign from '../assets/letterssign/fsign.png';
-import G from '../assets/letters/G.png';
-import gsign from '../assets/letterssign/gsign.png';
-import H from '../assets/letters/H.png';
-import hsign from '../assets/letterssign/hsign.png';
-import I from '../assets/letters/I.png';
-import isign from '../assets/letterssign/isign.png';
-import J from '../assets/letters/J.png';
-import jsign from '../assets/letterssign/jsign.png';
-import uk from '../assets/uk.png';
-import spain from '../assets/spain.png';
-import arrowD from '../assets/arrowD.png'
-import '../App.css';
+import F from '../../assets/letters/F.png';
+import fsign from '../../assets/letterssign/fsign.png';
+import G from '../../assets/letters/G.png';
+import gsign from '../../assets/letterssign/gsign.png';
+import H from '../../assets/letters/H.png';
+import hsign from '../../assets/letterssign/hsign.png';
+import I from '../../assets/letters/I.png';
+import isign from '../../assets/letterssign/isign.png';
+import J from '../../assets/letters/J.png';
+import jsign from '../../assets/letterssign/jsign.png';
+import uk from '../../assets/uk.png';
+import spain from '../../assets/spain.png';
+import arrowD from '../../assets/arrowD.png'
+import '../../App.css';
 
 const VSectionFJ = () => {
     const [visibleIndex, setVisibleIndex] = useState(0);

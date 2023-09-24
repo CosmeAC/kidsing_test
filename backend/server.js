@@ -54,11 +54,11 @@ dbConn.query(sql, values, (err, result) => {
 
 // --- Crear un jugador
 app.post('/CrearJugador', (req, res) => {
-  const { nombre, userId } = req.body;
-  const imagenBuffer = req.file.buffer; // la imagen esta por serparado por el cambio de formato a binario
+  const { nombre, userId, imagen } = req.body;
+  // const imagenBuffer = req.file.buffer; // la imagen esta por serparado por el cambio de formato a binario
 
-  const sql = 'INSERT INTO players (username, auth0_id,imagen) VALUES (?, ?, ?)';
-  const values = [nombre, userId,imagenBuffer]; // Utiliza el auth0_id como valor
+  const sql = 'INSERT INTO players (username, auth0_id, imagen) VALUES (?, ?, ?)';
+  const values = [nombre, userId,imagen]; // Utiliza el auth0_id como valor
 
   // Ejecuta la consulta SQL para insertar el jugador
   dbConn.query(sql, values, (err, result) => {
@@ -79,18 +79,11 @@ app.post('/CrearJugador', (req, res) => {
 });
 
 // ---Enviar datos del jugadora  frontend
-app.get('/MostrarJugadors/:userId', (req, res) => {
-  const userId = req.params.userId; // user id del auth0 del usuario que esta en la web
+app.get('/MostrarJugadors/:auth0_id', (req, res) => {
+  const auth0Id = req.params.auth0_id; // user id del auth0 del usuario que esta en la web
 
-// app.get('/MostrarJugadors', (req, res) => {
-//   const { userId } = req.body;
-
-  // const auth0Id = req.user.sub; 
-
-  // const { id, username, email } = req.body;
-
-  const sql = 'SELECT username,imagen FROM players WHERE auth0_id = ?';
-  const values = [userId]; // Utiliza el auth0_id como valor
+  const sql = 'SELECT username, imagen FROM players WHERE auth0_id = ?';
+  const values = [auth0Id]; // Utiliza el auth0_id como valor
 
   // const sql = 'INSERT INTO players (username) VALUES (?)';
   // const values = [nombre ]; // Utiliza el auth0_id como valor
@@ -102,9 +95,9 @@ app.get('/MostrarJugadors/:userId', (req, res) => {
       return;
     }else {
       // No se insertó ni se actualizó ningún registro (tal vez no había cambios)
-      console.log("Api Jugadore enviado");
+      console.log("Api Jugador enviado");
          // ID del jugador insertado
-    const jugadorId = result.insertId;
+    const jugadorId = result;
     
     // Responde con el ID del jugador insertado
     res.status(200).json({ jugadorId });

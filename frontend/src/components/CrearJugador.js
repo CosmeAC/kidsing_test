@@ -6,12 +6,14 @@ import axios from 'axios';
 import { image } from '@tensorflow/tfjs';
 
 // import elefanteImage from '../assets/avatar/elefante2.png';
+// let arrayImg{
 
+// }
 
 const CrearJugador = () => {
   const { user, isAuthenticated } = useAuth0();
   const [nombreJugador, setNombreJugador,] = useState('');
-  const [selectedImage, setSelectedImage] = useState('/avatar/elefante2.png');
+  const [selectedImage, setSelectedImage] = useState('');
   // ../assets/avatar/elefante2.png
 
   const navigate = useNavigate(); 
@@ -66,7 +68,7 @@ const CrearJugador = () => {
                 onClick={() => handleImagenPerfilChange('../assets/avatar/erizo.jpg')}
               />
 
-          <img src= {require(selectedImage)} alt="Previsualización de la imagen" id="image-preview" />
+          {/* <img src= {require(selectedImage)} alt="Previsualización de la imagen" id="image-preview" /> */}
 
           {/* {imagenPreview && (
             <img className="imagen-perfil" src={imagenPreview} alt="Vista previa de la imagen de perfil" />

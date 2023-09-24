@@ -1,9 +1,9 @@
-import Section1 from './Section1';
-import SectionAE from './SectionAE';
-import SectionFJ from './SectionFJ';
-import SectionKO from './SectionKO';
-import SectionPT from './SectionPT';
-import SectionUZ from './SectionUZ';
+import Section1 from './JuegoVocales/Section1';
+import SectionAE from './JuegosLetra/SectionAE';
+import SectionFJ from './JuegosLetra/SectionFJ';
+import SectionKO from './JuegosLetra/SectionKO';
+import SectionPT from './JuegosLetra/SectionPT';
+import SectionUZ from './JuegosLetra/SectionUZ';
 import Sectionnumbers from './JuegoNumManoVideo/Sectionnumbers';
 import Login from './Login';
 

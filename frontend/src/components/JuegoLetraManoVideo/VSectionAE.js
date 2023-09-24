@@ -1,18 +1,18 @@
 import React, {useState} from 'react';
-import A from '../assets/letters/A.png';
-import asign from '../assets/letterssign/asign.png';
-import B from '../assets/letters/B.png';
-import bsign from '../assets/letterssign/bsign.png';
-import C from '../assets/letters/C.png';
-import csign from '../assets/letterssign/csign.png';
-import D from '../assets/letters/D.png';
-import dsign from '../assets/letterssign/dsign.png';
-import E from '../assets/letters/E.png';
-import esign from '../assets/letterssign/esign.png';
-import uk from '../assets/uk.png';
-import spain from '../assets/spain.png';
-import arrowD from '../assets/arrowD.png'
-import '../App.css';
+import A from '../../assets/letters/A.png';
+import asign from '../../assets/letterssign/asign.png';
+import B from '../../assets/letters/B.png';
+import bsign from '../../assets/letterssign/bsign.png';
+import C from '../../assets/letters/C.png';
+import csign from '../../assets/letterssign/csign.png';
+import D from '../../assets/letters/D.png';
+import dsign from '../../assets/letterssign/dsign.png';
+import E from '../../assets/letters/E.png';
+import esign from '../../assets/letterssign/esign.png';
+import uk from '../../assets/uk.png';
+import spain from '../../assets/spain.png';
+import arrowD from '../../assets/arrowD.png'
+import '../../App.css';
 
 const VSectionAE = () => {
     const [visibleIndex, setVisibleIndex] = useState(0);

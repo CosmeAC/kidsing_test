@@ -5,6 +5,25 @@ import { Auth0Provider} from '@auth0/auth0-react';
 import App from './App';
 import axios from 'axios';
 
+import main_es from "./assets/translations/es/main.json";
+import main_en from "./assets/translations/en/main.json";
+import i18next from "i18next";
+import { I18nextProvider } from 'react-i18next';
+
+
+i18next.init({
+  interpolation: { escapeValue: true },
+  lng: "es",
+  resources: {
+    es: {
+      main: main_es,
+    },
+    en: {
+      main: main_en,
+  },
+}
+});
+
 function Auth0ProviderWithConfig() {
   const [auth0Config, setAuth0Config] = useState(null);
 
@@ -26,6 +45,7 @@ function Auth0ProviderWithConfig() {
   const { AUTH0_CLIENT_ID, AUTH0_DOMAIN } = auth0Config;
 
 return (
+  
   <Auth0Provider
     domain={AUTH0_DOMAIN}
     clientId={AUTH0_CLIENT_ID}
@@ -33,13 +53,14 @@ return (
   >
     <App />
   </Auth0Provider>
+ 
 );
 }
 
 const root = ReactDOMClient.createRoot(document.getElementById('root'));
 root.render(
-<React.StrictMode>
-  <Auth0ProviderWithConfig />
+<React.StrictMode><I18nextProvider i18n={i18next}>
+  <Auth0ProviderWithConfig /> </I18nextProvider>
 </React.StrictMode>
 );
 

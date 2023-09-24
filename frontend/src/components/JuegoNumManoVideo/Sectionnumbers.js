@@ -21,7 +21,8 @@ import nine from '../../assets/numbers/nine.png';
 import ninesign from '../../assets/numbers/ninesign.png';
 import uk from '../../assets/uk.png';
 import spain from '../../assets/spain.png';
-import "../../styles/App.css";
+import arrowD from '../../assets/arrowD.png'
+import '../../styles/App.css';
 
 const Sectionnumbers = () => {
 
@@ -34,62 +35,63 @@ const Sectionnumbers = () => {
     };
 
     return (
-        <div className='section-numbers'>
+        <div className='section-numbers' id='numbers'>
+            <div className='A-Z' style={{ display: visibleIndex === 0 ? 'flex' : 'none' }}>
+                <div><img src={zero} alt='' id='zero' /></div>
+                <div><img src={zerosign} alt='' id='zerosign' /></div>
+            </div>
+
+            <div className='A-Z' style={{ display: visibleIndex === 1 ? 'flex' : 'none' }}>
+                <div> <img src={one} alt='' id='one' /></div>
+                <div> <img src={onesign} alt='' id='onesign' /></div>
+            </div>
+
+            <div className='A-Z' style={{ display: visibleIndex === 2 ? 'flex' : 'none' }}>
+                <div> <img src={two} alt='' id='two' /></div>
+                <div><img src={twosign} alt='' id='twosign' /></div>
+            </div>
+
+            <div className='A-Z' style={{ display: visibleIndex === 3 ? 'flex' : 'none' }}>
+                <div> <img src={three} alt='' id='three' /></div>
+                <div> <img src={threesign} alt='' id='threesign' /></div>
+            </div>
+
+            <div className='A-Z' style={{ display: visibleIndex === 4 ? 'flex' : 'none' }}>
+                <div> <img src={four} alt='' id='four' /></div>
+                <div> <img src={foursign} alt='' id='foursign' /></div>
+            </div>
+
+            <div className='A-Z' style={{ display: visibleIndex === 5 ? 'flex' : 'none' }}>
+                <div> <img src={five} alt='' id='five' /></div>
+                <div><img src={fivesign} alt='' id='fivesign' /></div>
+            </div>
+
+            <div className='A-Z' style={{ display: visibleIndex === 6 ? 'flex' : 'none' }}>
+                <div><img src={six} alt='' id='six' /></div>
+                <div><img src={sixsign} alt='' id='sixsign' /></div>
+            </div>
+
+            <div className='A-Z' style={{ display: visibleIndex === 7 ? 'flex' : 'none' }}>
+                <div><img src={seven} alt='' id='seven' /></div>
+                <div><img src={sevensign} alt='' id='sevensign' /></div>
+            </div>
+
+            <div className='A-Z' style={{ display: visibleIndex === 8 ? 'flex' : 'none' }}>
+                <div> <img src={eight} alt='' id='eight' /></div>
+                <div> <img src={eightsign} alt='' id='eightsign' /></div>
+            </div>
+
+            <div className='A-Z' style={{ display: visibleIndex === 9 ? 'flex' : 'none' }}>
+                <div> <img src={nine} alt='' id='nine' /></div>
+                <div><img src={ninesign} alt='' id='ninesign' /> </div>
+            </div>
             <div className='esengmain'>
                 <div className='eng'> <button> <img src={uk} alt='' id='uk' /></button> </div>
                 <div className='es'> <button> <img src={spain} alt='' id='spain' /></button></div>
             </div>
-            <div className='A-Z' style={{ display: visibleIndex === 0 ? 'flex' : 'none' }}>
-                <div className='vocals'><img src={zero} alt='' id='zero' /></div>
-                <div className='vocals'><img src={zerosign} alt='' id='zerosign' /></div>
+            <div className='A-O'>
+                <input id="Button1" type="image" src={arrowD} alt='' onClick={switchVisible} />
             </div>
-
-            <div className='A-Z' style={{ display: visibleIndex === 1 ? 'flex' : 'none' }}>
-                <div className='vocals'> <img src={one} alt='' id='one' /></div>
-                <div className='vocals'><img src={onesign} alt='' id='onesign' /></div>
-            </div>
-
-            <div className='A-Z' style={{ display: visibleIndex === 2 ? 'flex' : 'none' }}>
-                <div className='vocals'> <img src={two} alt='' id='two' /></div>
-                <div className='vocals'><img src={twosign} alt='' id='twosign' /></div>
-            </div>
-
-            <div className='A-Z' style={{ display: visibleIndex === 3 ? 'flex' : 'none' }}>
-                <div className='vocals'> <img src={three} alt='' id='three' /></div>
-                <div className='vocals'> <img src={threesign} alt='' id='threesign' /></div>
-            </div>
-
-            <div className='A-Z' style={{ display: visibleIndex === 4 ? 'flex' : 'none' }}>
-                <div className='vocals'> <img src={four} alt='' id='four' /></div>
-                <div className='vocals'> <img src={foursign} alt='' id='foursign' /></div>
-            </div>
-
-            <div className='A-Z' style={{ display: visibleIndex === 5 ? 'flex' : 'none' }}>
-                <div className='vocals'> <img src={five} alt='' id='five' /></div>
-                <div className='vocals'><img src={fivesign} alt='' id='fivesign' /></div>
-            </div>
-
-            <div className='A-Z' style={{ display: visibleIndex === 6 ? 'flex' : 'none' }}>
-                <div className='vocals'><img src={six} alt='' id='six' /></div>
-                <div className='vocals'><img src={sixsign} alt='' id='sixsign' /></div>
-            </div>
-
-            <div className='A-Z' style={{ display: visibleIndex === 7 ? 'flex' : 'none' }}>
-                <div className='vocals'><img src={seven} alt='' id='seven' /></div>
-                <div className='vocals'><img src={sevensign} alt='' id='sevensign' /></div>
-            </div>
-
-            <div className='A-Z' style={{ display: visibleIndex === 8 ? 'flex' : 'none' }}>
-                <div className='vocals'> <img src={eight} alt='' id='eight' /></div>
-                <div className='vocals'> <img src={eightsign} alt='' id='eightsign' /></div>
-            </div>
-
-            <div className='A-Z' style={{ display: visibleIndex === 9 ? 'flex' : 'none' }}>
-                <div className='vocals'> <img src={nine} alt='' id='nine' /></div>
-                <div className='vocals'><img src={ninesign} alt='' id='ninesign' /> </div>
-            </div>
-
-            <input id="Button1" type="button" value="Click me" onClick={switchVisible} />
         </div>
     )
 }

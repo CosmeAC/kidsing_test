@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import vocalA from '../assets/letters/vocalA.png';
-import asign from '../assets/letterssign/asign.png';
-import vocalE from '../assets/letters/vocalE.png';
-import esign from '../assets/letterssign/esign.png';
-import vocalI from '../assets/letters/vocalI.png'
-import isign from '../assets/letterssign/isign.png';
-import vocalO from '../assets/letters/vocalO.png';
-import osign from '../assets/letterssign/osign.png';
-import vocalU from '../assets/letters/vocalU.png';
-import usign from '../assets/letterssign/usign.png';
-import arrowD from '../assets/arrowD.png'
-import uk from '../assets/uk.png';
-import spain from '../assets/spain.png';
-import '../App.css';
+import vocalA from '../../assets/letters/vocalA.png'
+import asign from '../../assets/letterssign/asign.png';
+import vocalE from '../../assets/letters/vocalE.png';
+import esign from '../../assets/letterssign/esign.png';
+import vocalI from '../../assets/letters/vocalI.png'
+import isign from '../../assets/letterssign/isign.png';
+import vocalO from '../../assets/letters/vocalO.png';
+import osign from '../../assets/letterssign/osign.png';
+import vocalU from '../../assets/letters/vocalU.png';
+import usign from '../../assets/letterssign/usign.png';
+import arrowD from '../../assets/arrowD.png'
+import uk from '../../assets/uk.png';
+import spain from '../../assets/spain.png';
+import '../../App.css';
 
 const VSection1 = () => {
   const [visibleIndex, setVisibleIndex] = useState(0);

@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import K from '../assets/letters/K.png';
-import ksign from '../assets/letterssign/ksign.png';
-import L from '../assets/letters/L.png';
-import lsign from '../assets/letterssign/lsign.png';
-import M from '../assets/letters/M.png';
-import msign from '../assets/letterssign/msign.png';
-import N from '../assets/letters/N.png';
-import nsign from '../assets/letterssign/nsign.png';
-import O from '../assets/letters/O.png';
-import osign from '../assets/letterssign/osign.png';
-import uk from '../assets/uk.png';
-import spain from '../assets/spain.png';
-import arrowD from '../assets/arrowD.png'
-import '../App.css';
+import K from '../../assets/letters/K.png';
+import ksign from '../../assets/letterssign/ksign.png';
+import L from '../../assets/letters/L.png';
+import lsign from '../../assets/letterssign/lsign.png';
+import M from '../../assets/letters/M.png';
+import msign from '../../assets/letterssign/msign.png';
+import N from '../../assets/letters/N.png';
+import nsign from '../../assets/letterssign/nsign.png';
+import O from '../../assets/letters/O.png';
+import osign from '../../assets/letterssign/osign.png';
+import uk from '../../assets/uk.png';
+import spain from '../../assets/spain.png';
+import arrowD from '../../assets/arrowD.png'
+import '../../App.css';
 
 
 const VSectionKO = () => {

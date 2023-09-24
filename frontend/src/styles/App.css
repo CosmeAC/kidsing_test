@@ -4,9 +4,20 @@
   padding: 0;
   font-family: 'Lato', sans-serif;
 }
-
+.root{
+  --color-bg: #ffebd2;
+  --color-bg: #ffebd2;
+  --color-bg-variant: ;
+  --color-primary: #7e0306;
+  --color-primary-variant: #d53e0f;
+  --transition: all 400ms ease;
+  --color-white: #fff;
+  --color-black: rgb(5, 5, 5);
+}
 .App{
-  background-color: rgb(0, 70, 211);
+  background-color: var(--color-bg);
+  /* background-color: #fffefe; */
+  /* color: var(--color-white); */
 }
 
 .Title h1{
@@ -42,7 +53,8 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
+  /* color: white; */
+  color: rgb(5, 5, 5);
 }
 
 #monosonriente{
@@ -137,6 +149,7 @@ h1 {
   width: 8em;
   height: 8em;
   background-color: #294ef5;
+  /* var(--color-bg); */
   padding: 0.5em;
   border-radius: 50%;
   margin: 0 auto 2em auto;

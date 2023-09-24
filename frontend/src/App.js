@@ -6,12 +6,11 @@ import Login from './components/Login';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import axios from 'axios';
-import Avatar from './components/Avatar';
-import Games from './components/Games';
 import Officialpage from './components/Officialpage';
 import Sectionnumbers from './components/JuegoNumManoVideo/Sectionnumbers';
 import VSectionnumbers from './components/JuegoLetraManoVideo/VSectionnumbers';
-import SeleccionarPerfil from './components/SeleccionarPerfil';
+import Jugadores from './components/Jugadores';
+import PlayerSelector from './components/PlayerSelector';
 
 // import Webcam from "react-webcam";
 
@@ -51,18 +50,24 @@ useEffect(() => {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/Avatar" element={<Avatar />} />
-          <Route path="/Games" element={<Games />} />
-          <Route path="/Officialpage" element={<Officialpage />} />
-          <Route path="/Sectionnumbers" element={<Sectionnumbers />} />
-          <Route path="/VSectionnumbers" element={<VSectionnumbers />} />
-          <Route path='/SeleccionarPerfil' element={<SeleccionarPerfil />} />
+          <Route path="/" element={<Main />} /> {/* Donde se ve */}
+
+            {/* <Route path="/rutasnuevas" element={< Cambiarcomponente />} />
+            <Route path="/rutasnuevas" element={< Cambiarcomponente />} />
+            <Route path="/rutasnuevas" element={< Cambiarcomponente />} />
+            <Route path="/rutasnuevas" element={< Cambiarcomponente />} />
+            <Route path="/rutasnuevas" element={< Cambiarcomponente />} /> */}
+          
+          <Route path="/Officialpage" element={<Officialpage />} /> {/* Donde se ve los botones para jugar*/}
+          <Route path="/Sectionnumbers" element={<Sectionnumbers />} /> {/* Donde se ve Juego Num */}
+          <Route path="/VSectionnumbers" element={<VSectionnumbers />} /> {/* Donde se ve Juego vid Num */}
+          <Route path='/Jugadores' element={<Jugadores />} /> {/* Donde se ve */}
+          <Route path='/PlayerSelector' element={<PlayerSelector />} /> {/* Donde se ve */}
+          <Route path='/' element={<PlayerSelector />} /> {/* Donde se ve */}
           {isAuthenticated ? (
-            <Route path="/CrearJugador" element={<CrearJugador />} />
-            
+            <Route path='/Jugadores' element={<Jugadores />} /> 
           ) : (
-            <Route path="/login" element={<Login />} />
+            <Route path="/login" element={<Login />} /> 
           )}
         </Routes>
       </BrowserRouter> 
