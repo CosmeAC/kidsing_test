@@ -1,0 +1,31 @@
+.bodyGame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #060606;
+    transform-style: preserve-3d;
+    color: #fff;
+    transition: 1000ms;
+    gap: 5rem;
+}
+
+.btnSeleccionCam{
+    height: fit-content;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 7px;
+    background: #fcb045;
+    color: #fff;
+    /* visibility: hidden; */
+    cursor: pointer;
+}
+
+/* ---cambiar color */
+.btnSeleccionCam:hover{ 
+    border: solid 1px #fff;
+    background: #fcb04528;
+    color: #fff;
+    /* visibility: hidden; */
+    cursor: pointer;
+}

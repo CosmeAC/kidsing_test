@@ -86,16 +86,16 @@ function PlayerSelector() {
                     <span onClick={() => setSelectedImage("../../public/AvatarPerfil/9.jpg")}><img src={require("../../public/AvatarPerfil/9.jpg")}></img></span>
                     <span onClick={() => setSelectedImage("../../public/AvatarPerfil/10.jpg")}><img src={require("../../public/AvatarPerfil/10.jpg")}></img></span> */}
 
-                    <span onClick={() => setSelectedImage("./avatar/1.jpg")}><img src={require("./avatar/1.jpg")}></img></span>
-                    <span onClick={() => setSelectedImage("./avatar/2.jpg")}><img src={require("./avatar/2.jpg")}></img></span>
-                    <span onClick={() => setSelectedImage("./avatar/3.jpg")}><img src={require("./avatar/3.jpg")}></img></span>
-                    <span onClick={() => setSelectedImage("./avatar/4.jpg")}><img src={require("./avatar/4.jpg")}></img></span>
-                    <span onClick={() => setSelectedImage("./avatar/5.jpg")}><img src={require("./avatar/5.jpg")}></img></span>
-                    <span onClick={() => setSelectedImage("./avatar/6.jpg")}><img src={require("./avatar/6.jpg")}></img></span>
-                    <span onClick={() => setSelectedImage("./avatar/7.jpg")}><img src={require("./avatar/7.jpg")}></img></span>
-                    <span onClick={() => setSelectedImage("./avatar/8.jpg")}><img src={require("./avatar/8.jpg")}></img></span>
-                    <span onClick={() => setSelectedImage("./avatar/9.jpg")}><img src={require("./avatar/9.jpg")}></img></span>
-                    <span onClick={() => setSelectedImage("./avatar/10.jpg")}><img src={require("./avatar/10.jpg")}></img></span>
+                    <span onClick={() => setSelectedImage("/avatar/1.jpg")}><img src={"/avatar/1.jpg"}></img></span>
+                    <span onClick={() => setSelectedImage("/avatar/2.jpg")}><img src={"avatar/2.jpg"}></img></span>
+                    <span onClick={() => setSelectedImage("/avatar/3.jpg")}><img src={"avatar/3.jpg"}></img></span>
+                    <span onClick={() => setSelectedImage("/avatar/4.jpg")}><img src={"avatar/4.jpg"}></img></span>
+                    <span onClick={() => setSelectedImage("/avatar/5.jpg")}><img src={"avatar/5.jpg"}></img></span>
+                    <span onClick={() => setSelectedImage("/avatar/6.jpg")}><img src={"avatar/6.jpg"}></img></span>
+                    <span onClick={() => setSelectedImage("/avatar/7.jpg")}><img src={"avatar/7.jpg"}></img></span>
+                    <span onClick={() => setSelectedImage("/avatar/8.jpg")}><img src={"avatar/8.jpg"}></img></span>
+                    <span onClick={() => setSelectedImage("/avatar/9.jpg")}><img src={"avatar/9.jpg"}></img></span>
+                    <span onClick={() => setSelectedImage("/avatar/10.jpg")}><img src={"avatar/10.jpg"}></img></span>
                 </div>
                 <div className="btns">
                     <div className="btn prev" onClick={() => { prev() }}></div>

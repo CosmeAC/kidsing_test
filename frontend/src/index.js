@@ -4,9 +4,12 @@ import React, { useEffect, useState } from 'react';
 import { Auth0Provider} from '@auth0/auth0-react';
 import App from './App';
 import axios from 'axios';
+ 
 
 import main_es from "./assets/translations/es/main.json";
 import main_en from "./assets/translations/en/main.json";
+import games_es from "./assets/translations/es/games.json";
+import games_en from "./assets/translations/en/games.json";
 import i18next from "i18next";
 import { I18nextProvider } from 'react-i18next';
 
@@ -17,9 +20,11 @@ i18next.init({
   resources: {
     es: {
       main: main_es,
+      games: games_es,
     },
     en: {
       main: main_en,
+      games: games_en,
   },
 }
 });

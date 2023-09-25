@@ -3,7 +3,7 @@ import '../../styles/MemoryGame.css';
 import Card from '../PropMemori/Card';
 import GameOver from '../PropMemori./GameOver';
 
-const MemoryGame = () => {
+const MemoryGameVocales = () => {
     let arrayofImages = [
         { num: 1, name: 'vocalA', img: require('../assets/letters/vocalA.png'), isMatch:false},
         { num: 2, name: 'vocalE', img: require('../assets/letters/vocalE.png'), isMatch:false},
@@ -114,4 +114,4 @@ const MemoryGame = () => {
     );
 }
 
-export default MemoryGame;
+export default MemoryGameVocales;

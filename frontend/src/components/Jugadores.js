@@ -50,16 +50,11 @@ import '../styles/Jugadores.css';
       <ul className='ulJugadores'>
         {Array.isArray(player.jugadorId) && player.jugadorId.length > 0 ? (
           player.jugadorId.map((jugador, index) => (
-            <Link to="/Games"><li key={index}>
-              {/* <img src={require(jugador.imagen)} alt={`Imagen ${index}`} /> */}
-              {/* <img src={jugador.imagen} /> */}
-              <img src={require(jugador.imagen)}></img>
+            <Link to="/Officialpage"><li key={index}>
+
+              <img className='imgJugadores'src={jugador.imagen}></img>
               
-                {/* <img src={require(jugador.imagen)} alt={`Imagen ${index}`} /> no funciona cargar la iamgen */}
-                {/* <span>Imagen</span> */}
-              
-              {/* <img src={require('./avatar/9.jpg')} alt={`Imagen ${index}`} /> */}
-              <p>{jugador.username}</p>
+              <p className='Njugadores'>{jugador.username}</p>
             </li></Link>
           ))
         ) : (
