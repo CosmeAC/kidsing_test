@@ -112,7 +112,9 @@ p {margin: 0;}
 }
 
 .quizz_num {
-  transform: scale(0.6);
+  height: 320px;
+  width: 220px;
+  object-fit: contain;
 }
 
 .quizz_down {
@@ -120,7 +122,6 @@ p {margin: 0;}
   justify-content: center;
   height: 50vh;
   gap: 50px;
-  /* margin-bottom: 50px; */
 }
 
 .quizz_down button .quizz_numB {

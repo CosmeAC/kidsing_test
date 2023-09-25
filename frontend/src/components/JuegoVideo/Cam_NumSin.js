@@ -2,8 +2,9 @@
 import React, { useRef, useState, useEffect } from "react";
 import * as tf from "@tensorflow/tfjs";
 import Webcam from "react-webcam";
-import "../../styles/App.css";
-// import '../../assets/Vimagenes/SignosNumeros/'
+import { Link } from 'react-router-dom';
+import "../../styles/camara_05.css";
+import { useTranslation } from 'react-i18next';
 
 
 function argMax(array) {
@@ -15,6 +16,8 @@ function randomElement(array) {
 }
 
 function App() {
+  const [t, i18n] = useTranslation("games"); //traduccion
+
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
   const canvasRef2 = useRef(null);
@@ -23,14 +26,14 @@ function App() {
   const [referencia, setReferencia] = useState(randomElement(numArray));
   let [results, setResults] = useState([]);
   const [points, setPoints] = useState(0);
-  const [timer, setTimer] = useState(20);
+  const [timer, setTimer] = useState(90);
 
   const [start, setStart] = useState(false);
-  const [dz, setDz] = useState(false);
+  const [end, setEnd] = useState(false);
 
   // Detection Zone y Cuadrado
-  let [x, setX] = useState(localStorage.getItem("x") ? parseInt(localStorage.getItem("x")) : 25);
-  let [y, setY] = useState(localStorage.getItem("y") ? parseInt(localStorage.getItem("y")) : 25);
+  const [x, setX] = useState(25);
+  const [y, setY] = useState(25);
   const [width, setWidth] = useState(320);
   const [height, setHeight] = useState(240);
 
@@ -38,8 +41,8 @@ function App() {
 
   useEffect(() => {
     const runModel = async () => {
-      const num_model_04 = "https://raw.githubusercontent.com/EricMartinezIllamola/num-model-04/main/model.json";
-      const num_model_06 = "https://raw.githubusercontent.com/EricMartinezIllamola/num-model-06/main/model.json";
+      // const num_model_04 = "https://raw.githubusercontent.com/EricMartinezIllamola/num-model-04/main/model.json";
+      const num_model_06 = "https://raw.githubusercontent.com/EricMartinezIllamola/num-model-06-B/main/model.json";
 
       const model = await tf.loadGraphModel(num_model_06);
       console.log("Model loaded.");
@@ -71,15 +74,6 @@ function App() {
             canvasRef2.current.width = videoWidth;
             canvasRef2.current.height = videoHeight;
 
-            // if (parseInt(localStorage.getItem("x")) != x) {
-            //   x = parseInt(localStorage.getItem("x"));
-            // }
-
-            // if (parseInt(localStorage.getItem("y")) != y) {
-            //   y = parseInt(localStorage.getItem("y"));
-            // }
-
-            // const frame = webcamRef.current.getScreenshot()
             const canvas = document.getElementById("canvas");
 
             // Draw Detection Zone
@@ -91,7 +85,7 @@ function App() {
             const resized = tf.image.resizeBilinear(img, [56, 56])
             const expanded = resized.expandDims(0)
             const obj = await model.execute(expanded)
-            const predictedValue = argMax(obj.arraySync()[0]); 
+            const predictedValue = argMax(obj.arraySync()[0]);
             results.push(predictedValue);
             setResults(results.slice(-10));
             results = results.slice(-10);
@@ -140,23 +134,19 @@ function App() {
     runModel();
   }, []);
 
-  const save = () => {
-    localStorage.setItem("x", document.getElementById("x").value);
-    localStorage.setItem("y", document.getElementById("y").value);
-    setX(parseInt(localStorage.getItem("x")));
-    setY(parseInt(localStorage.getItem("y")));
-  }
-
   useEffect(() => {
-    if (results.filter(x => x == referencia).length == 7) {
+    if (results.filter(x => x === referencia).length === 7) {
       setResults([]);
       if (timer > 0 && start) {
         setPoints(points + 1);
         setReferencia(randomElement(numArray));
       }
-      else if (timer == 0 && start) {
+      else if (timer === 0 && start) {
         setReferencia(randomElement(numArray));
       }
+    }
+    else if (timer <= 0 && start) {
+      setEnd(true);
     }
   }, [results]);
 
@@ -173,7 +163,6 @@ function App() {
           className="web"
           ref={webcamRef}
           muted={true}
-          // mirrored={true}  
           style={{
             position: "absolute",
             marginLeft: "auto",
@@ -191,7 +180,6 @@ function App() {
         <canvas
           ref={canvasRef2}
           id="canvas2"
-          // mirrored={true}
           style={{
             position: "absolute",
             marginLeft: "auto",
@@ -209,38 +197,46 @@ function App() {
         <canvas
           ref={canvasRef}
           id="canvas"
-          // mirrored={true}
           style={{
             position: "absolute",
             marginLeft: "auto",
             marginRight: "auto",
-            left: -2500,
+            left: -4500,
             right: 0,
             textAlign: "center",
             zindex: 8,
             width: 640,
             height: 480,
-            // visibility: "hidden",
           }}
         />
-        {/* <img className="img_ejemplo" src={require("./SignosNumeros/" + referencia + ".jpg")}></img> */}
-        <img className="img_ejemplo" src={require("../../assets/Vimagenes/SignosNumeros/" + referencia + ".jpg")}></img>
-        <div><p className="num_ejemplo">{referencia}</p></div>
-        <div><p className="points">{points}</p></div>
-        <div><p className="timer">{timer < 10 ? "0" + timer : timer}</p></div>
-        <button className="btn-exit" onClick={() => { }}>EXIT</button>
+        <div className="left_side">
+          <div className="left_up">
+            <div className="left_up_mono"><img className={end? "camara_mono camara_mono_salta" : "camara_mono"} src={require("../../assets/mascots/monohojas.png")}></img></div>
+            <div className="left_up_points">
+              <div><p className="timer">{timer < 10 ? t("Games.Tiempo0") + timer : t("Games.Tiempo") + timer}</p></div>
+              <div><p className="points">{t("Games.Puntos") + points}</p></div>
+            </div>
+          </div>
+          <div className="left_center">
+            <img className="num_ejemplo" src={require("../../assets/global_camara/" + referencia + ".png")}></img>
+          </div>
+        </div>
+        <div className="right_side">
+          <Link to={"/Officialpage"} className="camara_l_exit"><button className="camara_exit" onClick={() => { }}>{t("Games.BtnExit")}</button></Link>
+        </div>
+        <div className="camara_extend"></div>
+        
       </div>
     );
   }
-  else if (!start && !dz) {
+  else if (!start) {
     return (
       <div className="App">
 
         <Webcam
           className="web"
           ref={webcamRef}
-          muted={true}
-          // mirrored={true}  
+          muted={true} 
           style={{
             position: "absolute",
             marginLeft: "auto",
@@ -258,7 +254,6 @@ function App() {
         <canvas
           ref={canvasRef2}
           id="canvas2"
-          // mirrored={true}
           style={{
             position: "absolute",
             marginLeft: "auto",
@@ -276,107 +271,32 @@ function App() {
         <canvas
           ref={canvasRef}
           id="canvas"
-          // mirrored={true}
           style={{
             position: "absolute",
             marginLeft: "auto",
             marginRight: "auto",
-            left: -2500,
+            left: -4500,
             right: 0,
             textAlign: "center",
             zindex: 8,
             width: 640,
             height: 480,
-            // visibility: "hidden",
           }}
         />
-        {/* <img className="img_ejemplo" src={require("./SignosNumeros/" + referencia + ".jpg")}></img>
-        <div><p className="num_ejemplo">{referencia}</p></div> */}
-        <div><p className="points">{points}</p></div>
-        <div><p className="timer">{timer < 10 ? "0" + timer : timer}</p></div>
-        <button className="btn-start" onClick={() => { setStart(!start); setTimer(timer + 1); setReferencia(randomElement(numArray)) }}>START</button>
-        <button className="btn-dz" onClick={() => { setDz(!dz); }}>Square</button>
-        <button className="btn-exit" onClick={() => { }}>EXIT</button>
-      </div>
-    )
-  }
-
-  else if (!start && dz) {
-    return (
-      <section>
-        <div className="App">
-          <Webcam
-            className="web"
-            ref={webcamRef}
-            muted={true}
-            // mirrored={true}  
-            style={{
-              position: "absolute",
-              marginLeft: "auto",
-              marginRight: "auto",
-              top: 100,
-              left: 500,
-              right: 0,
-              textAlign: "center",
-              zindex: 9,
-              width: 640,
-              height: 480,
-            }}
-          />
-
-          <canvas
-            ref={canvasRef2}
-            id="canvas2"
-            // mirrored={true}
-            style={{
-              position: "absolute",
-              marginLeft: "auto",
-              marginRight: "auto",
-              top: 100,
-              left: 500,
-              right: 0,
-              textAlign: "center",
-              zindex: 8,
-              width: 640,
-              height: 480,
-            }}
-          />
-
-          <canvas
-            ref={canvasRef}
-            id="canvas"
-            // mirrored={true}
-            style={{
-              position: "absolute",
-              marginLeft: "auto",
-              marginRight: "auto",
-              left: -2500,
-              right: 0,
-              textAlign: "center",
-              zindex: 8,
-              width: 640,
-              height: 480,
-            }}
-          />
-          {/* <img className="img_ejemplo" src={require("./SignosNumeros/" + referencia + ".jpg")}></img>
-        <div><p className="num_ejemplo">{referencia}</p></div> */}
+        <div className="left_side">
+          <div className="left_up">
+            <div className="left_up_mono"><img className="camara_mono" src={require("../../assets/mascots/monohojas.png")}></img></div>
+            <div className="left_up_points">
+            <div><p className="timer">{timer < 10 ? t("Games.Tiempo0") + timer : t("Games.Tiempo") + timer}</p></div>
+              <div><p className="points">{t("Games.Puntos") + points}</p></div>
+            </div>
+          </div>
+          <div className="left_start">
+            <button className="btn_start" onClick={() => { setStart(!start); setTimer(timer + 1); setReferencia(randomElement(numArray)) }}>{t("Games.BtnStart")}</button>
+            <Link to={"/Officialpage"} className="camara_l_exit"><button className="btn_exit">{t("Games.BtnExit")}</button></Link>
+          </div>
         </div>
-        <div><p className="points">{points}</p></div>
-        <div><p className="timer">{timer < 10 ? "0" + timer : timer}</p></div>
-        <form action="" onSubmit={() => { setDz(!dz); save() }}>
-          <label name="x">X</label>
-          <input type="number" name="x" id="x"></input>
-          <label name="y">Y</label>
-          <input type="number" name="y" id="y"></input>
-          <label name="width">Width</label>
-          <input type="number" name="width"></input>
-          <label name="height">Height</label>
-          <input type="number" name="height"></input>
-          <button type="Submit" className="btn-save" >Save</button>
-          {/* onClick={ () => { setDz(!dz)} } */}
-        </form>
-        <button className="btn-reset">Reset</button>
-      </section>
+      </div>
     )
   }
 }

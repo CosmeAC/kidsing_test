@@ -23,7 +23,7 @@ import uk from '../../assets/uk.png';
 import spain from '../../assets/spain.png';
 import arrowD from '../../assets/arrowD.png'
 import '../../styles/App.css';
-import Num5 from '../../components/JuegoNumVideo/num_05.js';
+import Num5 from '../JuegoVideo/num_05.js';
 
 
 const VSectionnumbers = () => {

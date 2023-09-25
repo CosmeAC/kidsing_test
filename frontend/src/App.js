@@ -8,7 +8,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import axios from 'axios';
 import Officialpage from './components/Officialpage';
 import Sectionnumbers from './components/JuegoNumManoVideo/Sectionnumbers';
-import VSectionnumbers from './components/JuegoLetraManoVideo/VSectionnumbers';
+// import VSectionnumbers from './components/JuegoLetraManoVideo/VSectionnumbers';
 import Jugadores from './components/Jugadores';
 import PlayerSelector from './components/PlayerSelector';
 
@@ -36,19 +36,32 @@ import SelecGamPTSin from './components/SeleccJugadores/SelecGamPTSin'
 import SelecGamUZSin from './components/SeleccJugadores/SelecGamUZSin'
 import SelecGamAlphabetSin from './components/SeleccJugadores/SelecGamAlphabetSin'
 import SelecGamGlobalSin from './components/SeleccJugadores/SelecGamGlobalSin'
+
 //Leccion
 
-//LeccionManoVideo
-
-//Memori
-import MemoryGameAE from './components/juegoMemori/MemoryGameAE'
-import MemoryGameFJ from './components/juegoMemori/MemoryGameFJ'
-import MemoryGameKO from './components/juegoMemori/MemoryGameKO'
-import MemoryGamePT from './components/juegoMemori/MemoryGamePT'
-import MemoryGameUZ from './components/juegoMemori/MemoryGameUZ'
-import MemoryGameVocales from './components/juegoMemori/MemoryGameVocales'
-import MemoryGamenum from './components/juegoMemori/MemoryGamenum'
-// import MemoryGameAE from './components/juegoMemori/MemoryGamenum' segunda parte
+//Camara
+import Cam_Num from './components/JuegoVideo/Cam_Num'
+import Cam_Num_2J from './components/JuegoVideo/Cam_Num_2J'
+import Cam_04 from './components/JuegoVideo/Cam_04'
+import Cam_04_2J from './components/JuegoVideo/Cam_04_2J'
+import Cam_59 from './components/JuegoVideo/Cam_59'
+import Cam_59_2J from './components/JuegoVideo/Cam_59_2J'
+import Cam_Glob from './components/JuegoVideo/Cam_Glob'
+import Cam_Glob_2J from './components/JuegoVideo/Cam_Glob_2J'
+import Cam_Alphabet from './components/JuegoVideo/Cam_Alphabet'
+import Cam_Alphabet_2J from './components/JuegoVideo/Cam_Alphabet_2J'
+import Cam_Vocales from './components/JuegoVideo/Cam_Vocales'
+import Cam_Vocales_2J from './components/JuegoVideo/Cam_Vocales_2J'
+import Cam_AE from './components/JuegoVideo/Cam_AE'
+import Cam_AE_2J from './components/JuegoVideo/Cam_AE_2J'
+import Cam_FJ from './components/JuegoVideo/Cam_FJ'
+import Cam_FJ_2J from './components/JuegoVideo/Cam_FJ_2J'
+import Cam_KO from './components/JuegoVideo/Cam_KO'
+import Cam_KO_2J from './components/JuegoVideo/Cam_KO_2J'
+import Cam_PT from './components/JuegoVideo/Cam_PT'
+import Cam_PT_2J from './components/JuegoVideo/Cam_PT_2J'
+import Cam_UZ from './components/JuegoVideo/Cam_UZ'
+import Cam_UZ_2J from './components/JuegoVideo/Cam_UZ_2J'
 
 
 //Juego Relacionar
@@ -65,6 +78,39 @@ import QuizzAlphabet from './components/JuegoRelacionar/quizz_alphabet'
 import QuizzGlobal from './components/JuegoRelacionar/quizz_global'
 
 
+//Memori
+// import MemoryGameAE from './components/juegoMemori/MemoryGameAE'
+// import MemoryGameFJ from './components/juegoMemori/MemoryGameFJ'
+// import MemoryGameKO from './components/juegoMemori/MemoryGameKO'
+// import MemoryGamePT from './components/juegoMemori/MemoryGamePT'
+// import MemoryGameUZ from './components/juegoMemori/MemoryGameUZ'
+// import MemoryGameVocales from './components/juegoMemori/MemoryGameVocales'
+// import MemoryGamenum from './components/juegoMemori/MemoryGamenum'
+// import MemoryGameAE from './components/juegoMemori/MemoryGamenum' segunda parte
+
+//Camara Sin Ayuda
+import Cam_NumSin from './components/JuegoVideo/Cam_NumSin'
+import Cam_NumSin_2J from './components/JuegoVideo/Cam_NumSin_2J'
+import Cam_04Sin from './components/JuegoVideo/Cam_04Sin'
+import Cam_04Sin_2J from './components/JuegoVideo/Cam_04Sin_2J'
+import Cam_59Sin from './components/JuegoVideo/Cam_59Sin'
+import Cam_59Sin_2J from './components/JuegoVideo/Cam_59Sin_2J'
+import Cam_GlobSin from './components/JuegoVideo/Cam_GlobSin'
+import Cam_GlobSin_2J from './components/JuegoVideo/Cam_GlobSin_2J'
+import Cam_AlphabetSin from './components/JuegoVideo/Cam_AlphabetSin'
+import Cam_AlphabetSin_2J from './components/JuegoVideo/Cam_AlphabetSin_2J'
+import Cam_VocalesSin from './components/JuegoVideo/Cam_VocalesSin'
+import Cam_VocalesSin_2J from './components/JuegoVideo/Cam_VocalesSin_2J'
+import Cam_AESin from './components/JuegoVideo/Cam_AESin'
+import Cam_AESin_2J from './components/JuegoVideo/Cam_AESin_2J'
+import Cam_FJSin from './components/JuegoVideo/Cam_FJSin'
+import Cam_FJSin_2J from './components/JuegoVideo/Cam_FJSin_2J'
+import Cam_KOSin from './components/JuegoVideo/Cam_KOSin'
+import Cam_KOSin_2J from './components/JuegoVideo/Cam_KOSin_2J'
+import Cam_PTSin from './components/JuegoVideo/Cam_PTSin'
+import Cam_PTSin_2J from './components/JuegoVideo/Cam_PTSin_2J'
+import Cam_UZSin from './components/JuegoVideo/Cam_UZSin'
+import Cam_UZSin_2J from './components/JuegoVideo/Cam_UZSin_2J'
 
 // import Webcam from "react-webcam";
 
@@ -142,10 +188,58 @@ useEffect(() => {
             <Route path="/SelecGamUZSin" element={< SelecGamUZSin />} />
             <Route path="/SelecGamAlphabetSin" element={< SelecGamAlphabetSin />} />
             <Route path="/SelecGamGlobalSin" element={< SelecGamGlobalSin />} />
+
+            <Route path="/Cam_Num" element={< Cam_Num />} />
+            <Route path="/Cam_Num_2J" element={< Cam_Num_2J />} />
+            <Route path="/Cam_04" element={< Cam_04 />} />
+            <Route path="/Cam_04_2J" element={< Cam_04_2J />} />
+            <Route path="/Cam_59" element={< Cam_59 />} />
+            <Route path="/Cam_59_2J" element={< Cam_59_2J />} />
+            <Route path="/Cam_Glob" element={< Cam_Glob />} />
+            <Route path="/Cam_Glob_2J" element={< Cam_Glob_2J />} />
+            <Route path="/Cam_Alphabet" element={< Cam_Alphabet />} />
+            <Route path="/Cam_Alphabet_2J" element={< Cam_Alphabet_2J />} />
+            <Route path="/Cam_Vocales" element={< Cam_Vocales />} />
+            <Route path="/Cam_Vocales_2J" element={< Cam_Vocales_2J />} />
+            <Route path="/Cam_AE" element={< Cam_AE />} />
+            <Route path="/Cam_AE_2J" element={< Cam_AE_2J />} />
+            <Route path="/Cam_FJ" element={< Cam_FJ />} />
+            <Route path="/Cam_FJ_2J" element={< Cam_FJ_2J />} />
+            <Route path="/Cam_KO" element={< Cam_KO />} />
+            <Route path="/Cam_KO_2J" element={< Cam_KO_2J />} />
+            <Route path="/Cam_PT" element={< Cam_PT />} />
+            <Route path="/Cam_PT_2J" element={< Cam_PT_2J />} />
+            <Route path="/Cam_UZ" element={< Cam_UZ />} />
+            <Route path="/Cam_UZ_2J" element={< Cam_UZ_2J />} />
+
+
+            <Route path="/Cam_NumSin" element={< Cam_NumSin />} />
+            <Route path="/Cam_NumSin_2J" element={< Cam_NumSin_2J />} />
+            <Route path="/Cam_04Sin" element={< Cam_04Sin />} />
+            <Route path="/Cam_04Sin_2J" element={< Cam_04Sin_2J />} />
+            <Route path="/Cam_59Sin" element={< Cam_59Sin />} />
+            <Route path="/Cam_59Sin_2J" element={< Cam_59Sin_2J />} />
+            <Route path="/Cam_GlobSin" element={< Cam_GlobSin />} />
+            <Route path="/Cam_GlobSin_2J" element={< Cam_GlobSin_2J />} />
+            <Route path="/Cam_AlphabetSin" element={< Cam_AlphabetSin />} />
+            <Route path="/Cam_AlphabetSin_2J" element={< Cam_AlphabetSin_2J />} />
+            <Route path="/Cam_VocalesSin" element={< Cam_VocalesSin />} />
+            <Route path="/Cam_VocalesSin_2J" element={< Cam_VocalesSin_2J />} />
+            <Route path="/Cam_AESin" element={< Cam_AESin />} />
+            <Route path="/Cam_AESin_2J" element={< Cam_AESin_2J />} />
+            <Route path="/Cam_FJSin" element={< Cam_FJSin />} />
+            <Route path="/Cam_FJSin_2J" element={< Cam_FJSin_2J />} />
+            <Route path="/Cam_KOSin" element={< Cam_KOSin />} />
+            <Route path="/Cam_KOSin_2J" element={< Cam_KOSin_2J />} />
+            <Route path="/Cam_PTSin" element={< Cam_PTSin />} />
+            <Route path="/Cam_PTSin_2J" element={< Cam_PTSin_2J />} />
+            <Route path="/Cam_UZSin" element={< Cam_UZSin />} />
+            <Route path="/Cam_UZSin_2J" element={< Cam_UZSin_2J />} />
+
           
           
           <Route path="/Sectionnumbers" element={<Sectionnumbers />} /> {/* Donde se ve Juego Num */}
-          <Route path="/VSectionnumbers" element={<VSectionnumbers />} /> {/* Donde se ve Juego vid Num */}
+          {/* <Route path="/VSectionnumbers" element={<VSectionnumbers />} />  */}
           <Route path='/Jugadores' element={<Jugadores />} /> {/* Donde se ve */}
           <Route path='/PlayerSelector' element={<PlayerSelector />} /> {/* Donde se ve */}
           <Route path='/' element={<PlayerSelector />} /> {/* Donde se ve */}

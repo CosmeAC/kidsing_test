@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  height: 100vh;
+  width: 100%;
+  background-color: lightsalmon;
+  display: flex;
+  border-radius: 0px;
+}
+
+.left_side {
+  width: 40%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left_side .left_up {
+  min-height: 15vh;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  gap: 10%;
+}
+
+.left_side .left_up .left_up_points {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.left_side .left_up .left_up_mono {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+}
+
+.left_side .left_up .left_up_mono .camara_mono {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.camara_mono_salta {
+  animation-duration: 1100ms;
+  animation-name: gira_salta;
+  animation-timing-function: linear;
+  animation-iteration-count: 2; 
+}
+
+@keyframes gira_salta {
+  0% {
+    transform: rotate(0deg) scale(1); 
+  }
+
+  25% {
+    transform: rotate(90deg) scale(1.4);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(1.8);
+  }
+
+  75% {
+    transform: rotate(270deg) scale(1.4);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.left_side .left_center {
+  min-height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  gap: 5%;
+}
+
+.img_ejemplo {
+  height: 400px;
+  width: 250px;
+  object-fit: contain;
+}
+
+.num_ejemplo {
+  height: 320px;
+  width: 220px;
+  object-fit: contain;
+}
+
+.left_start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  min-height: 60vh;
+}
+
+.left_start .btn_start, .left_start .btn_exit {
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 7px;
+  background:linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  color: #fff;
+}
+
+/* .left_start .btn_start:hover, .left_start .btn_exit:hover {
+  background-color: #fff;
+  color: #000;
+  border: 3px solid #000;
+} */
+
+.left_start .btn_start {
+  margin-bottom: 20%;
+}
+
+.right_side {
+  display: flex;
+  width: 60%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 15%;
+}
+
+.camara_exit, .camara_continue {
+  height: fit-content;
+  width: fit-content;
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 7px;
+  background:linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  color: #fff;
+  cursor: pointer;
+}
+
+.camara_l_continue {
+  visibility: hidden;
+}
+
+.camara_extend {
+  height: 10vh;
+}
