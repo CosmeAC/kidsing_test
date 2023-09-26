@@ -1,7 +1,3 @@
-
-
-    
-
     import React, { useState, useEffect } from "react";
     import "../../styles/quizz.css";
     
@@ -68,7 +64,7 @@
         }, [referencia])
     
         return (
-            <div className="quizz">
+            <div className="quizz_numeros">
                 <div className="quizz_up">
                     <div className="quizz_points">
                         <div><p>{t("Games.Puntos") + points}</p></div>
@@ -82,7 +78,7 @@
                     <button onClick={() => { comprobar(s1) }} className="quizz_cards"><img className="quizz_numB" src={require("../../assets/imgquizzglobal/" + s1 + "B.png")}></img></button>
                     <button onClick={() => { comprobar(s2) }} className="quizz_cards"><img className="quizz_numB" src={require("../../assets/imgquizzglobal/" + s2 + "B.png")}></img></button>
                     <button onClick={() => { comprobar(s3) }} className="quizz_cards"><img className="quizz_numB" src={require("../../assets/imgquizzglobal/" + s3 + "B.png")}></img></button>
-                    <Link to={''} className={end? "quizz_link show" : "quizz_link"}><button className={end? "quizz_continue show" : "quizz_continue"}>{t("Games.BtnNext")}</button></Link>
+                    <Link to={'/MemoryGamenum'} className={end? "quizz_link show" : "quizz_link"}><button className={end? "quizz_continue show" : "quizz_continue"}>{t("Games.BtnNext")}</button></Link>
                 </div>
                 <div className="quizz_expand"></div>
             </div>

@@ -3,11 +3,26 @@
   padding: 0;
 }
 
-.quizz {
-  background-image: url(../assets/monitos.png);
-  background-size: 80px;
+.quizz_vocales {
   height: 100vh;
+  background-color: rgb(46, 211, 0);
 }
+
+.quizz_alphabet {
+  height: 100vh;
+  background-color: rgb(0, 199, 206);
+}
+
+.quizz_numeros {
+  height: 100vh;
+  background-color: rgb(190, 128, 226);
+}
+
+.quizz_global {
+  height: 100vh;
+  background-color: rgb(255, 16, 135);
+}
+
 
 .quizz_mono {
   height: 250px;
@@ -104,7 +119,7 @@ p {margin: 0;}
   flex-direction: column;
   justify-content: center;
   font-size: 40px;
-  background-color: rgba(0, 0, 0, 0.918);
+  background-color: rgba(0, 0, 0, 0.7);
   border: 1px solid black;
   border-radius: 15px;
   color: white;
@@ -113,13 +128,14 @@ p {margin: 0;}
 
 .quizz_num {
   height: 320px;
-  width: 220px;
+  width: 200px;
   object-fit: contain;
 }
 
 .quizz_down {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 50vh;
   gap: 50px;
 }
@@ -132,11 +148,12 @@ p {margin: 0;}
 
 .quizz_down .quizz_cards {
   background-color: #fff;
-  height: 400px;
+  height: 350px;
   width: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
 }
 
 .quizz_down .quizz_cards:hover {
@@ -148,19 +165,23 @@ p {margin: 0;}
   align-self: self-end;
 }
 
+.show {
+  visibility: visible;
+}
+
 .quizz_exit, .quizz_continue {
   height: fit-content;
   font-size: 30px;
   padding: 10px;
   border-radius: 7px;
-  background:linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
-  /* visibility: hidden; */
   cursor: pointer;
+  transition: 200ms;
 }
 
-.show {
-  visibility: visible;
+.quizz_exit:hover, .quizz_continue:hover {
+  transform: scale(1.2);
 }
 
 /* .quizz_continue {
