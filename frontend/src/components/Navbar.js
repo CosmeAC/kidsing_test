@@ -3,6 +3,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import '../styles/Navbar.css';
 import {Link} from 'react-scroll';
 import {CgProfile} from 'react-icons/cg';
+import Login from './Login'
 
 import { useTranslation } from 'react-i18next';
 
@@ -18,9 +19,10 @@ const [t, i18n] = useTranslation("main"); //traduccion
       </Link>
       <Link to='About'> About us </Link>
       <Link to='Team'> Team </Link>
-      <button onClick={loginWithRedirect}>
+      {/* <button onClick={loginWithRedirect}>
       <CgProfile/>
-      </button>
+      </button> */}
+      <Login/>
     </nav>
   )
 }

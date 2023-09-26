@@ -1,25 +1,25 @@
 import { useState, useEffect } from 'react';
 import '../../styles/MemoryGame.css';
 import Card from '../PropMemori/Card';
-import GameOver from '../PropMemori./GameOver';
+import GameOver from '../PropMemori/GameOver';
 
 const MemoryGameVocales = () => {
     let arrayofImages = [
-        { num: 1, name: 'vocalA', img: require('../assets/letters/vocalA.png'), isMatch:false},
-        { num: 2, name: 'vocalE', img: require('../assets/letters/vocalE.png'), isMatch:false},
-        { num: 3, name: 'vocalI', img: require('../assets/letters/vocalI.png'), isMatch:false},
-        { num: 4, name: 'vocalO', img: require('../assets/letters/vocalO.png'), isMatch:false},
-        { num: 5, name: 'vocalU', img: require('../assets/letters/vocalU.png'), isMatch:false},
-        { num: 6, name: 'monolengua', img: require('../assets/monolengua.png'), isMatch:false},
+        { num: 1, name: 'vocalA', img: require('../../assets/letters/vocalA.png'), isMatch:false},
+        { num: 2, name: 'vocalE', img: require('../../assets/letters/vocalE.png'), isMatch:false},
+        { num: 3, name: 'vocalI', img: require('../../assets/letters/vocalI.png'), isMatch:false},
+        { num: 4, name: 'vocalO', img: require('../../assets/letters/vocalO.png'), isMatch:false},
+        { num: 5, name: 'vocalU', img: require('../../assets/letters/vocalU.png'), isMatch:false},
+        { num: 6, name: 'monolengua', img: require('../../assets/monolengua.png'), isMatch:false},
     ]
 
     let arrayofSigns = [
-        { num: 1, name: 'asign', img: require('../assets/letterssign/asign.png')},
-        { num: 2, name: 'esign', img: require('../assets/letterssign/esign.png') },
-        { num: 3, name: 'isign', img: require('../assets/letterssign/isign.png') },
-        { num: 4, name: 'osign', img: require('../assets/letterssign/osign.png') },
-        { num: 5, name: 'usign', img: require('../assets/letterssign/usign.png') },
-        { num: 6, name: 'monolengua', img: require('../assets/monolengua.png')},  
+        { num: 1, name: 'asign', img: require('../../assets/letterssign/asign.png')},
+        { num: 2, name: 'esign', img: require('../../assets/letterssign/esign.png') },
+        { num: 3, name: 'isign', img: require('../../assets/letterssign/isign.png') },
+        { num: 4, name: 'osign', img: require('../../assets/letterssign/osign.png') },
+        { num: 5, name: 'usign', img: require('../../assets/letterssign/usign.png') },
+        { num: 6, name: 'monolengua', img: require('../../assets/monolengua.png')},  
     ]
 
     const [cards, setCards] = useState([]);

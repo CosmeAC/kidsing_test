@@ -28,16 +28,6 @@
     perspective: 700px;
 }
 
-.cards-containerglobal{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    background:linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
-    height: auto;
-    gap: 1rem;
-    padding: 1rem;
-    perspective: 700px;
-}
-
 .cards{
     background-color: white;
     display: flex;

@@ -1,25 +1,25 @@
 import { useState, useEffect } from 'react';
 import '../../styles/MemoryGame.css';
 import Card from '../PropMemori/Card';
-import GameOver from '../PropMemori./GameOver';
+import GameOver from '../PropMemori/GameOver';
 
 const MemoryGamenum = () => {
     let arrayofImages = [
-        { num: 1, name: 'zero', img: require('../assets/numbers/zero.png'), isMatch:false},
-        { num: 2, name: 'one', img: require('../assets/numbers/one.png'), isMatch:false},
-        { num: 3, name: 'two', img: require('../assets/numbers/two.png'), isMatch:false},
-        { num: 4, name: 'three', img: require('../assets/numbers/three.png'), isMatch:false},
-        { num: 5, name: 'four', img: require('../assets/numbers/four.png'), isMatch:false},
-        { num: 6, name: 'five', img: require('../assets/numbers/five.png'), isMatch:false},
+        { num: 1, name: 'zero', img: require('../../assets/numbers/zero.png'), isMatch:false},
+        { num: 2, name: 'one', img: require('../../assets/numbers/one.png'), isMatch:false},
+        { num: 3, name: 'two', img: require('../../assets/numbers/two.png'), isMatch:false},
+        { num: 4, name: 'three', img: require('../../assets/numbers/three.png'), isMatch:false},
+        { num: 5, name: 'four', img: require('../../assets/numbers/four.png'), isMatch:false},
+        { num: 6, name: 'monohojas', img: require('../../assets/mascots/monohojas.png'), isMatch:false},
     ]
 
     let arrayofSigns = [
-        { num: 1, name: 'zerosign', img: require('../assets/numbers/zerosign.png')},
-        { num: 2, name: 'onesign', img: require('../assets/numbers/onesign.png') },
-        { num: 3, name: 'twosign', img: require('../assets/numbers/twosign.png') },
-        { num: 4, name: 'threesign', img: require('../assets/numbers/threesign.png') },
-        { num: 5, name: 'foursign', img: require('../assets/numbers/foursign.png') },
-        { num: 6, name: 'fivesign', img: require('../assets/numbers/fivesign.png')},  
+        { num: 1, name: 'zerosign', img: require('../../assets/numbers/zerosign.png')},
+        { num: 2, name: 'onesign', img: require('../../assets/numbers/onesign.png') },
+        { num: 3, name: 'twosign', img: require('../../assets/numbers/twosign.png') },
+        { num: 4, name: 'threesign', img: require('../../assets/numbers/threesign.png') },
+        { num: 5, name: 'foursign', img: require('../../assets/numbers/foursign.png') },
+        { num: 6, name: 'monohojas', img: require('../../assets/mascots/monohojas.png')},  
     ]
 
     const [cards, setCards] = useState([]);

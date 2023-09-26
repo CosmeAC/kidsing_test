@@ -1,25 +1,25 @@
 import { useState, useEffect } from 'react';
 import '../../styles/MemoryGame.css';
 import Card from '../PropMemori/Card';
-import GameOver from '../PropMemori./GameOver';
+import GameOver from '../PropMemori/GameOver';
 
 const MemoryGameUZ = () => {
     let arrayofImages = [
-        { num: 1, name: 'U', img: require('../assets/letters/U.png'), isMatch:false},
-        { num: 2, name: 'V', img: require('../assets/letters/V.png'), isMatch:false},
-        { num: 3, name: 'W', img: require('../assets/letters/W.png'), isMatch:false},
-        { num: 4, name: 'X', img: require('../assets/letters/X.png'), isMatch:false},
-        { num: 5, name: 'Y', img: require('../assets/letters/Y.png'), isMatch:false},
-        { num: 6, name: 'Z', img: require('../assets/letters/Z.png'), isMatch:false},
+        { num: 1, name: 'U', img: require('../../assets/letters/U.png'), isMatch:false},
+        { num: 2, name: 'V', img: require('../../assets/letters/V.png'), isMatch:false},
+        { num: 3, name: 'W', img: require('../../assets/letters/W.png'), isMatch:false},
+        { num: 4, name: 'X', img: require('../../assets/letters/X.png'), isMatch:false},
+        { num: 5, name: 'Y', img: require('../../assets/letters/Y.png'), isMatch:false},
+        { num: 6, name: 'Z', img: require('../../assets/letters/Z.png'), isMatch:false},
     ]
 
     let arrayofSigns = [
-        { num: 1, name: 'usign', img: require('../assets/letterssign/usign.png')},
-        { num: 2, name: 'vsign', img: require('../assets/letterssign/vsign.png') },
-        { num: 3, name: 'wsign', img: require('../assets/letterssign/wsign.png') },
-        { num: 4, name: 'xsign', img: require('../assets/letterssign/xsign.png') },
-        { num: 5, name: 'ysign', img: require('../assets/letterssign/ysign.png') },
-        { num: 6, name: 'zsign', img: require('../assets/letterssign/zsign.png')},  
+        { num: 1, name: 'usign', img: require('../../assets/letterssign/usign.png')},
+        { num: 2, name: 'vsign', img: require('../../assets/letterssign/vsign.png') },
+        { num: 3, name: 'wsign', img: require('../../assets/letterssign/wsign.png') },
+        { num: 4, name: 'xsign', img: require('../../assets/letterssign/xsign.png') },
+        { num: 5, name: 'ysign', img: require('../../assets/letterssign/ysign.png') },
+        { num: 6, name: 'zsign', img: require('../../assets/letterssign/zsign.png')},  
     ]
 
     const [cards, setCards] = useState([]);

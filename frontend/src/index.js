@@ -54,11 +54,10 @@ return (
   <Auth0Provider
     domain={AUTH0_DOMAIN}
     clientId={AUTH0_CLIENT_ID}
-    authorizationParams={{ redirect_uri: 'http://localhost:3000/CrearJugador'}}
+    authorizationParams={{ redirect_uri: 'http://localhost:3000/Jugadores'}}
   >
     <App />
   </Auth0Provider>
- 
 );
 }
 

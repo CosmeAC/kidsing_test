@@ -1,6 +1,5 @@
 import React, {useState,useEffect} from 'react';
 import './styles/App.css';
-import CrearJugador from './components/CrearJugador';
 import Main from './components/Main';
 import Login from './components/Login';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -79,14 +78,17 @@ import QuizzGlobal from './components/JuegoRelacionar/quizz_global'
 
 
 //Memori
-// import MemoryGameAE from './components/juegoMemori/MemoryGameAE'
-// import MemoryGameFJ from './components/juegoMemori/MemoryGameFJ'
-// import MemoryGameKO from './components/juegoMemori/MemoryGameKO'
-// import MemoryGamePT from './components/juegoMemori/MemoryGamePT'
-// import MemoryGameUZ from './components/juegoMemori/MemoryGameUZ'
-// import MemoryGameVocales from './components/juegoMemori/MemoryGameVocales'
-// import MemoryGamenum from './components/juegoMemori/MemoryGamenum'
-// import MemoryGameAE from './components/juegoMemori/MemoryGamenum' segunda parte
+import MemoryGameAE from './components/juegoMemori/MemoryGameAE'
+import MemoryGameFJ from './components/juegoMemori/MemoryGameFJ'
+import MemoryGameKO from './components/juegoMemori/MemoryGameKO'
+import MemoryGamePT from './components/juegoMemori/MemoryGamePT'
+import MemoryGameUZ from './components/juegoMemori/MemoryGameUZ'
+import MemoryGameVocales from './components/juegoMemori/MemoryGameVocales'
+import MemoryGamenum from './components/juegoMemori/MemoryGamenum'
+import MemoryGamenum69 from './components/juegoMemori/MemoryGamenum69'
+import MemoryGameglobal from './components/juegoMemori/MemoryGameglobal'
+import MemoryGamegloballetras from './components/juegoMemori/MemoryGamegloballetras';
+//memeori global
 
 //Camara Sin Ayuda
 import Cam_NumSin from './components/JuegoVideo/Cam_NumSin'
@@ -111,6 +113,8 @@ import Cam_PTSin from './components/JuegoVideo/Cam_PTSin'
 import Cam_PTSin_2J from './components/JuegoVideo/Cam_PTSin_2J'
 import Cam_UZSin from './components/JuegoVideo/Cam_UZSin'
 import Cam_UZSin_2J from './components/JuegoVideo/Cam_UZSin_2J'
+
+
 
 // import Webcam from "react-webcam";
 
@@ -152,6 +156,10 @@ useEffect(() => {
         <Routes>
           <Route path="/" element={<Main />} /> {/* Donde se ve */}
           <Route path="/Officialpage" element={<Officialpage />} /> {/* Donde se ve los botones para jugar*/}
+          {/*Juegos Leccion*/}
+
+
+
             {/*Juegos relacionar*/}
             <Route path="/QuizzVocales" element={< QuizzVocales />} />
             <Route path="/QuizzAE" element={< QuizzAE />} />
@@ -164,6 +172,7 @@ useEffect(() => {
             <Route path="/QuizzNums" element={< QuizzNums />} />
             <Route path="/QuizzAlphabet" element={< QuizzAlphabet />} />
             <Route path="/QuizzGlobal" element={< QuizzGlobal />} />
+
             {/*Seleccionar 1jug o 2jug*/}
             <Route path="/SelecGamNum" element={< SelecGamNum />} />
             <Route path="/SelecGam04" element={< SelecGam04 />} />
@@ -176,7 +185,7 @@ useEffect(() => {
             <Route path="/SelecGamUZ" element={< SelecGamUZ />} />
             <Route path="/SelecGamAlphabet" element={< SelecGamAlphabet />} />
             <Route path="/SelecGamGlobal" element={< SelecGamGlobal />} />
-            {/*SIN AYUDA-Seleccionar 1jug o 2jug*/}
+            {/*Seleccionar SIN AYUDA 1jug o 2jug*/}
             <Route path="/SelecGamNumSin" element={< SelecGamNumSin />} />
             <Route path="/SelecGam0Sin4" element={< SelecGam04Sin />} />
             <Route path="/SelecGam59Sin" element={< SelecGam59Sin />} />
@@ -189,6 +198,19 @@ useEffect(() => {
             <Route path="/SelecGamAlphabetSin" element={< SelecGamAlphabetSin />} />
             <Route path="/SelecGamGlobalSin" element={< SelecGamGlobalSin />} />
 
+            <Route path="/MemoryGameAE" element={< MemoryGameAE />} />
+            <Route path="/MemoryGameFJ" element={< MemoryGameFJ />} />
+            <Route path="/MemoryGameKO" element={< MemoryGameKO />} />
+            <Route path="/MemoryGamePT" element={< MemoryGamePT />} />
+            <Route path="/MemoryGameUZ" element={< MemoryGameUZ />} />
+            <Route path="/MemoryGameVocales" element={< MemoryGameVocales />} />
+            <Route path="/MemoryGamenum" element={< MemoryGamenum />} /> 
+            <Route path="/MemoryGamenum69" element={< MemoryGamenum69 />} /> 
+            <Route path="/MemoryGameglobal" element={< MemoryGameglobal />} /> 
+            <Route path="/MemoryGamegloballetras" element={< MemoryGamegloballetras />} /> 
+
+
+            {/* Juego Cam 1j y 2j */}
             <Route path="/Cam_Num" element={< Cam_Num />} />
             <Route path="/Cam_Num_2J" element={< Cam_Num_2J />} />
             <Route path="/Cam_04" element={< Cam_04 />} />
@@ -212,7 +234,7 @@ useEffect(() => {
             <Route path="/Cam_UZ" element={< Cam_UZ />} />
             <Route path="/Cam_UZ_2J" element={< Cam_UZ_2J />} />
 
-
+            {/* Juego Cam 2J 1j y 2j SIN AYUDA*/}
             <Route path="/Cam_NumSin" element={< Cam_NumSin />} />
             <Route path="/Cam_NumSin_2J" element={< Cam_NumSin_2J />} />
             <Route path="/Cam_04Sin" element={< Cam_04Sin />} />
@@ -240,14 +262,14 @@ useEffect(() => {
           
           <Route path="/Sectionnumbers" element={<Sectionnumbers />} /> {/* Donde se ve Juego Num */}
           {/* <Route path="/VSectionnumbers" element={<VSectionnumbers />} />  */}
-          <Route path='/Jugadores' element={<Jugadores />} /> {/* Donde se ve */}
+          {/* <Route path='/Jugadores' element={<Jugadores />} />  */}
           <Route path='/PlayerSelector' element={<PlayerSelector />} /> {/* Donde se ve */}
           <Route path='/' element={<PlayerSelector />} /> {/* Donde se ve */}
 
           {isAuthenticated ? (
             <Route path='/Jugadores' element={<Jugadores />} /> 
           ) : (
-            <Route path="/login" element={<Login />} /> 
+            <Route path="/" element={<Main />} /> 
           )}
         </Routes>
       </BrowserRouter> 

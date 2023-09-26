@@ -3,23 +3,23 @@ import '../../styles/MemoryGame.css';
 import Card from '../PropMemori/Card';
 import GameOver from '../PropMemori/GameOver';
 
-const MemoryGamePT = () => {
+const MemoryGamenum69 = () => {
     let arrayofImages = [
-        { num: 1, name: 'P', img: require('../../assets/letters/P.png'), isMatch:false},
-        { num: 2, name: 'Q', img: require('../../assets/letters/Q.png'), isMatch:false},
-        { num: 3, name: 'R', img: require('../../assets/letters/R.png'), isMatch:false},
-        { num: 4, name: 'S', img: require('../../assets/letters/S.png'), isMatch:false},
-        { num: 5, name: 'T', img: require('../../assets/letters/T.png'), isMatch:false},
-        { num: 6, name: 'Monorama', img: require('../../assets/Monorama.png'), isMatch:false},
+        { num: 1, name: 'five', img: require('../../assets/numbers/five.png'), isMatch:false},
+        { num: 2, name: 'six', img: require('../../assets/numbers/six.png'), isMatch:false},
+        { num: 3, name: 'seven', img: require('../../assets/numbers/seven.png'), isMatch:false},
+        { num: 4, name: 'eight', img: require('../../assets/numbers/eight.png'), isMatch:false},
+        { num: 5, name: 'nine', img: require('../../assets/numbers/nine.png'), isMatch:false},
+        { num: 6, name: 'monosonriente', img: require('../../assets/monosonriente.png'), isMatch:false},
     ]
 
     let arrayofSigns = [
-        { num: 1, name: 'psign', img: require('../../assets/letterssign/psign.png')},
-        { num: 2, name: 'qsign', img: require('../../assets/letterssign/qsign.png') },
-        { num: 3, name: 'rsign', img: require('../../assets/letterssign/rsign.png') },
-        { num: 4, name: 'ssign', img: require('../../assets/letterssign/ssign.png') },
-        { num: 5, name: 'tsign', img: require('../../assets/letterssign/tsign.png') },
-        { num: 6, name: 'Monorama', img: require('../../assets/Monorama.png')},  
+        { num: 1, name: 'fivesign', img: require('../../assets/numbers/fivesign.png')},
+        { num: 2, name: 'sixsign', img: require('../../assets/numbers/sixsign.png') },
+        { num: 3, name: 'sevensign', img: require('../../assets/numbers/sevensign.png') },
+        { num: 4, name: 'eightsign', img: require('../../assets/numbers/eightsign.png') },
+        { num: 5, name: 'ninesign', img: require('../../assets/numbers/ninesign.png') },
+        { num: 6, name: 'monosonriente', img: require('../../assets/monosonriente.png')},  
     ]
 
     const [cards, setCards] = useState([]);
@@ -114,4 +114,4 @@ const MemoryGamePT = () => {
     );
 }
 
-export default MemoryGamePT;
+export default MemoryGamenum69;
