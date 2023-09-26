@@ -145,7 +145,7 @@ const Officialpage = () => {
         <div className='vocals-path'>
           <ul className='btnlist'>
             <li>
-              <Link to='SectionAE'>
+              <Link to='/SectionAE'>
                 <button className='btnA'> <img src={star} alt='' id='star' /> </button>
               </Link>
             </li>
@@ -257,11 +257,11 @@ const Officialpage = () => {
                 <button className='btnA3'><img src='https://img.icons8.com/color/48/launch-box.png' alt='' id='launchbox'/></button> 
                 </Link>
                 </li>
-            <li>
+            {/* <li>
               <Link to='/MemoryGamegloballetras'> 
               <button className='btnA4'><img src={Memory} alt='' id='Memory'/></button> 
               </Link>
-              </li> 
+              </li>  */}
             <li> 
               <Link to='/SelecGamAlphabet'> 
               <button className='btnA5'><img src={party} alt='' id='party'/></button> 
@@ -274,7 +274,7 @@ const Officialpage = () => {
         <div className='vocals-path'>
           <ul className='btnlist'>
             <li> 
-            <Link to='/Section04'> <button className='btn01'> <img src={star} alt='' id='star' /> </button> </Link>
+            <Link to='/Sectionnumber04'> <button className='btn01'> <img src={star} alt='' id='star' /> </button> </Link>
               </li>
             <li> 
             <Link to='/SelecGam04'><button className='btn11'> <img src={numerosicon} alt='' id='numerosicon' /> </button></Link>
@@ -294,7 +294,7 @@ const Officialpage = () => {
         <div className='vocals-path'>
           <ul className='btnlist'>
             <li> 
-            <Link to='/Section59'> <button className='btn01'> <img src={star} alt='' id='star' /> </button> </Link>
+            <Link to='/Sectionnumber59'> <button className='btn01'> <img src={star} alt='' id='star' /> </button> </Link>
               </li>
             <li> 
             <Link to='/SelecGam59'><button className='btn11'> <img src={numerosicon} alt='' id='numerosicon' /> </button> </Link>

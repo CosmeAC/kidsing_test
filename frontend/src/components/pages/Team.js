@@ -1,6 +1,8 @@
 import React from 'react';
 import '../../styles/App.css';
 import foto from '../../assets/foto.jpg';
+import erizo from '../../assets/avatar/erizo.jpg';
+import girafa from '../../assets/avatar/girafa.jpg';
 
 export const Team = () => {
   return (
@@ -23,20 +25,20 @@ export const Team = () => {
         <div class="column">
           <div class="card">
             <div class="img-container">
-              <img src="profile-img-2.png" alt=''/>
+              <img src={erizo} alt='' id='alex'/>
             </div>
             <h3>Alex</h3>
-            <p>Back end Developer</p>
+            <p>Backend Developer</p>
           </div>
         </div>
         {/* <!-- Column 3--> */}
         <div class="column">
           <div class="card">
             <div class="img-container">
-              <img src="profile-img-3.png" alt='' />
+              <img src={girafa} alt='' id='saira'/>
             </div>
             <h3>Saira</h3>
-            <p> Front End Developer</p>
+            <p> Frontend Developer</p>
           </div>
         </div>
       </div>

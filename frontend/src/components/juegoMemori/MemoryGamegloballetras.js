@@ -3,18 +3,11 @@ import '../../styles/MemoryGame.css';
 import Card from '../PropMemori/Card';
 import GameOver from '../PropMemori/GameOver';
 
+//Solo llama a 6 pero no funciona a partir de eso, 
 const MemoryGamegloballetras = () => {
     let numArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
-    const [random, setRandom] = useState([]);
-
-
-    for (let index = 0; index < 7; index++) {
-        let newArray = numArray;
-        let num = newArray[Math.floor(Math.random() * newArray.length)]
-        random.push(num);
-        numArray = numArray.filter(x => x !== num);
-        
-    }
+    let arrayofImages2 = [];
+    let arrayofSigns2 = [];
 
     let arrayofImages = [
         { num: 1, name: 'A', img: require('../../assets/letters/A.png'), isMatch:false},
@@ -76,6 +69,17 @@ const MemoryGamegloballetras = () => {
 
     ]
 
+    for (let index = 1; index < 7; index++) {
+   
+        let num = Math.floor(Math.random() * 25) + 0;
+        console.log(arrayofImages[num]);
+        // numArray = numArray.filter(x => x !== num);
+        arrayofImages2.push(arrayofImages[num]);
+        arrayofSigns2.push(arrayofSigns[num]);
+    }
+    console.log(arrayofImages2);
+
+    
     const [cards, setCards] = useState([]);
     const [selectedCards, setSelectedCards] = useState([]);
     const [score, setScore] = useState(0);
@@ -85,15 +89,15 @@ const MemoryGamegloballetras = () => {
     const shuffleImages = () => {
 
         //double array
+        let shuffledArray = [];
         for (let index = 0; index < 7; index++) {
-            
-            
+            shuffledArray = [...arrayofImages2[index], ...arrayofSigns2[index]];
         }
-        let shuffledArray = [...arrayofImages, ...arrayofSigns]
-            //add id
-            .map((item, index) => ({...item, id: index + 1 }))
+        shuffledArray = shuffledArray.map((item, index) => ({...item, id: index + 1 })).sort((a, b) => 0.5 - Math.random());
 
-            .sort((a, b) => 0.5 - Math.random());
+
+            //add id
+
         setScore(0)
         setCards(shuffledArray);
     };
@@ -136,7 +140,7 @@ const MemoryGamegloballetras = () => {
     //restart game
 
     useEffect(() =>{
-        if(score === arrayofImages.length && arrayofSigns.length) {
+        if(score === arrayofImages2.length && arrayofSigns2.length) {
             console.log("game over");
             setTimeout(() =>{
                 shuffleImages();
@@ -157,10 +161,10 @@ const MemoryGamegloballetras = () => {
                     <div className='tries'> <strong>Tries {tries}</strong></div>
                 </div>
                 <div className='cards-containergloballetras'>
-                    {cards.map((arrayofImages) => (
+                    {cards.map((arrayofImages2) => (
                         <Card
-                            key={arrayofImages.id}
-                            card={arrayofImages}
+                            key={arrayofImages2.id}
+                            card={arrayofImages2}
                             setSelectedCards={setSelectedCards}
                             selectedCards={selectedCards} />
                     ))}

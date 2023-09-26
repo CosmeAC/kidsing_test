@@ -7,7 +7,6 @@ import { useAuth0 } from '@auth0/auth0-react';
 import axios from 'axios';
 import Officialpage from './components/Officialpage';
 import Sectionnumbers from './components/JuegoNumManoVideo/Sectionnumbers';
-// import VSectionnumbers from './components/JuegoLetraManoVideo/VSectionnumbers';
 import Jugadores from './components/Jugadores';
 import PlayerSelector from './components/PlayerSelector';
 
@@ -37,7 +36,14 @@ import SelecGamAlphabetSin from './components/SeleccJugadores/SelecGamAlphabetSi
 import SelecGamGlobalSin from './components/SeleccJugadores/SelecGamGlobalSin'
 
 //Leccion
-
+import Section1 from './components/JuegosLecciones/Section1';
+import SectionAE from './components/JuegosLecciones/SectionAE'
+import SectionFJ from './components/JuegosLecciones/SectionFJ'
+import SectionKO from './components/JuegosLecciones/SectionKO'
+import SectionPT from './components/JuegosLecciones/SectionPT'
+import SectionUZ from './components/JuegosLecciones/SectionUZ'
+import Sectionnumber04 from './components/JuegosLecciones/Sectionnumber04'
+import Sectionnumber59 from './components/JuegosLecciones/Sectionnumber59'
 //Camara
 import Cam_Num from './components/JuegoVideo/Cam_Num'
 import Cam_Num_2J from './components/JuegoVideo/Cam_Num_2J'
@@ -86,8 +92,8 @@ import MemoryGameUZ from './components/juegoMemori/MemoryGameUZ'
 import MemoryGameVocales from './components/juegoMemori/MemoryGameVocales'
 import MemoryGamenum from './components/juegoMemori/MemoryGamenum'
 import MemoryGamenum69 from './components/juegoMemori/MemoryGamenum69'
-import MemoryGameglobal from './components/juegoMemori/MemoryGameglobal'
-import MemoryGamegloballetras from './components/juegoMemori/MemoryGamegloballetras';
+import MemoryGameglobal from './components/juegoMemori/MemoryGameglobal' //memori global numeros
+// import MemoryGamegloballetras from './components/juegoMemori/MemoryGamegloballetras';
 //memeori global
 
 //Camara Sin Ayuda
@@ -113,6 +119,7 @@ import Cam_PTSin from './components/JuegoVideo/Cam_PTSin'
 import Cam_PTSin_2J from './components/JuegoVideo/Cam_PTSin_2J'
 import Cam_UZSin from './components/JuegoVideo/Cam_UZSin'
 import Cam_UZSin_2J from './components/JuegoVideo/Cam_UZSin_2J'
+
 
 
 
@@ -157,7 +164,19 @@ useEffect(() => {
           <Route path="/" element={<Main />} /> {/* Donde se ve */}
           <Route path="/Officialpage" element={<Officialpage />} /> {/* Donde se ve los botones para jugar*/}
           {/*Juegos Leccion*/}
+            <Route path="/Section1" element={< Section1/>} />
+            <Route path="/SectionAE" element={< SectionAE/>} />
+            <Route path="/SectionFJ" element={< SectionFJ />} />
+            <Route path="/SectionKO" element={< SectionKO />} />
+            <Route path="/SectionPT" element={< SectionPT />} />
+            <Route path="/SectionUZ" element={< SectionUZ />} />
+            <Route path="/Sectionnumber04" element={< Sectionnumber04 />} />
+            <Route path="/Sectionnumber59" element={< Sectionnumber59 />} />
 
+            {/* <Route path="/Quizz59" element={< Quizz59 />} />
+            <Route path="/QuizzNums" element={< QuizzNums />} />
+            <Route path="/QuizzAlphabet" element={< QuizzAlphabet />} />
+            <Route path="/QuizzGlobal" element={< QuizzGlobal />} /> */}
 
 
             {/*Juegos relacionar*/}
@@ -207,7 +226,8 @@ useEffect(() => {
             <Route path="/MemoryGamenum" element={< MemoryGamenum />} /> 
             <Route path="/MemoryGamenum69" element={< MemoryGamenum69 />} /> 
             <Route path="/MemoryGameglobal" element={< MemoryGameglobal />} /> 
-            <Route path="/MemoryGamegloballetras" element={< MemoryGamegloballetras />} /> 
+            {/*NO FUNCIONA DE MOMENTO
+             <Route path="/MemoryGamegloballetras" element={< MemoryGamegloballetras />} />  */}
 
 
             {/* Juego Cam 1j y 2j */}
@@ -261,7 +281,7 @@ useEffect(() => {
           
           
           <Route path="/Sectionnumbers" element={<Sectionnumbers />} /> {/* Donde se ve Juego Num */}
-          {/* <Route path="/VSectionnumbers" element={<VSectionnumbers />} />  */}
+
           {/* <Route path='/Jugadores' element={<Jugadores />} />  */}
           <Route path='/PlayerSelector' element={<PlayerSelector />} /> {/* Donde se ve */}
           <Route path='/' element={<PlayerSelector />} /> {/* Donde se ve */}
