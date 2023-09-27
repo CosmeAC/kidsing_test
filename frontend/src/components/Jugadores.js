@@ -7,7 +7,14 @@ import '../styles/Jugadores.css';
   const Jugadores  = () => {
     const { user, isAuthenticated } = useAuth0(); 
     const [player,setPlayer] = useState([]);
+    const [backgroundColorIndex, setBackgroundColorIndex] = useState(0);
     
+    const coloresFondo = ['fondo-uno', 'fondo-dos', 'fondo-tres'];
+
+    const cambiarFondo = () => {
+      // Cambia el índice de color al siguiente color de la lista
+      setBackgroundColorIndex((prevIndex) => (prevIndex + 1) % coloresFondo.length);
+    };
     
     
     useEffect(() => {
@@ -26,33 +33,19 @@ import '../styles/Jugadores.css';
       }
     }, [user, isAuthenticated]);
 
-    return (
-    //   <div>
-    //   <ul>
-    //     {Array.isArray(jugadores) ? (
-    //       jugadores.map((jugador, index) => (
-    //         <li key={index}>
-    //           <img src={jugador.imagen} alt={`Imagen ${index}`} />
-    //           <p>Nombre: {jugador.username}</p>
-    //         </li>
-    //       ))
-    //     ) : (
-    //       <p>No hay jugadores disponibles.</p>
-    //     )}
-    //   </ul>
-    //   <Link to="/PlayerSelector">
-    //     <button>crear jugador</button>
-    //   </Link>
-    // </div>
+    const bodyJugadoresClass = `bodyJugadores ${coloresFondo[backgroundColorIndex]}`;
 
-      <div className="bodyJugadores">
+    return (
+
+      // <div className="{bodyJugadores}">
+      <div className={bodyJugadoresClass}>
         <div className=''></div>
       <ul className='ulJugadores'>
         {Array.isArray(player.jugadorId) && player.jugadorId.length > 0 ? (
           player.jugadorId.map((jugador, index) => (
             <Link to="/Officialpage"><li key={index}>
 
-              <img className='imgJugadores'src={jugador.imagen}></img>
+              <img className='imgJugadores' src={jugador.imagen} onMouseEnter={cambiarFondo} ></img>
               
               <p className='Njugadores'>{jugador.username}</p>
             </li></Link>
@@ -64,7 +57,7 @@ import '../styles/Jugadores.css';
         <div className='divCrearJugador'>
           <Link to="/PlayerSelector">
             <button className='btnCrearJugador'>+</button>
-            <p>Añadir jugador</p>
+            <p className='Njugadores'>Añadir jugador</p>
             {/* <p>jugador</p> */}
           </Link>
         </div>  

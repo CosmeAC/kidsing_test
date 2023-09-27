@@ -1,12 +1,12 @@
 import React from 'react';
 import '../../styles/App.css';
-// import verdetrans from '../../assets/verdetrans.png';
+import verdetrans from '../../assets/Mainimagenes/verdetrans.png';
 
-export const Home = () => {
+const Home = () => {
   return (
     <div className='home' id='Home'>
       <div className='home-items'> 
-      {/* <img src={verdetrans} alt='' id='verdetrans'/>  */}
+      <img src={verdetrans} alt='' id='verdetrans'/> 
       </div>
       <div className='home-items'>
         <h2> Let's have FUN and LEARN together</h2>

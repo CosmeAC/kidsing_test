@@ -43,7 +43,7 @@ function PlayerSelector() {
     
             if (response.status === 200) {
                 // Si la creación del jugador fue exitosa, redirige a la página deseada
-                navigate('/Games');
+                navigate('/Jugadores');
               }
               console.log(response.avatar)
         } catch (error) {
