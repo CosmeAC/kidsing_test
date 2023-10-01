@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import five from '../../assets/numbers/five.png';
 import fivesign from '../../assets/numbers/fivesign.png';
 import six from '../../assets/numbers/six.png';
@@ -17,12 +17,48 @@ import '../../styles/App.css';
 const Sectionnumber59 = () => {
 
     const [visibleIndex, setVisibleIndex] = useState(0);
+    const [utterance, setUtterance] = useState(null);
+    const [utterance2, setUtterance2] = useState(null);
+//audio y poner funcion en cada boton
+    const handlePlay_es = () => {
+        const synth = window.speechSynthesis;
+        synth.speak(utterance);
+    };
+
+    const handlePlay_en = () => {
+        const synth = window.speechSynthesis;
+        synth.speak(utterance2);
+    };
+//
 
     const switchVisible = () => {
         // Calculate the index of the next div to show
         const nextIndex = (visibleIndex + 1) % 5;
         setVisibleIndex(nextIndex)
     };
+
+    // audio usestate
+    useEffect(() => {
+        const synth = window.speechSynthesis;
+        const es = new SpeechSynthesisUtterance(convertirvocales[visibleIndex]['name']);
+        es.lang = "es-ES";
+        setUtterance(es);
+        const en = new SpeechSynthesisUtterance(convertirvocales[visibleIndex]['name']);
+        en.lang = "en-US";
+        setUtterance2(en);
+        return () => {
+            synth.cancel();
+        };
+    }, [visibleIndex]);
+//fin
+    const convertirvocales =
+    {
+        0: { name: "5" },
+        1: { name: '6' },
+        2: { name: "7" },
+        3: { name: "8" },
+        4: { name: "9" },
+    }
 
     return (
         <div className='section-numbers' id='numbers'>
@@ -52,8 +88,8 @@ const Sectionnumber59 = () => {
                 <div><img src={ninesign} alt='' id='ninesign' /> </div>
             </div>
             <div className='esengmain'>
-                <div className='eng'> <button> <img src={uk} alt='' id='uk' /></button> </div>
-                <div className='es'> <button> <img src={spain} alt='' id='spain' /></button></div>
+                <div className='eng'> <button onClick={() => { handlePlay_en() }}>  <img src={uk} alt='' id='uk' /></button> </div>
+                <div className='es'> <button onClick={() => { handlePlay_es() }}> <img src={spain} alt='' id='spain' /></button></div>
             </div>
             <div className='A-O'>
                 <input id="Button1" type="image" src={arrowD} alt='' onClick={switchVisible} />

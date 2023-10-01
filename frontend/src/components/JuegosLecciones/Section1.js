@@ -5,14 +5,14 @@ import vocalE from '../../assets/letters/vocalE.png';
 import esign from '../../assets/letterssign/esign.png';
 import vocalI from '../../assets/letters/vocalI.png'
 import isign from '../../assets/letterssign/isign.png';
-import ovocal from '../../assets/letters/ovocal.png';
+import vocalO from '../../assets/letters/vocalO.png';
 import osign from '../../assets/letterssign/osign.png';
 import vocalU from '../../assets/letters/vocalU.png';
 import usign from '../../assets/letterssign/usign.png';
-import right from '../../assets/right.png'
+import arrowD from '../../assets/arrowD.png';
 import uk from '../../assets/uk.png';
 import spain from '../../assets/spain.png';
-import "../../styles/App.css";
+import "../../styles/Section1.css";
 
 const Section1 = () => {
     const [visibleIndex, setVisibleIndex] = useState(0);
@@ -82,7 +82,7 @@ const Section1 = () => {
             </div>
 
             <div className='A-O' style={{ display: visibleIndex === 3 ? 'flex' : 'none' }}>
-                <div className='vocals'> <img src={ovocal} alt='' id='ovocal' /></div>
+                <div className='vocals'> <img src={vocalO} alt='' id='vocalO' /></div>
                 <div className='vocals'> <img src={osign} alt='' id='osign' /></div>
             </div>
 
@@ -92,7 +92,7 @@ const Section1 = () => {
             </div>
 
             <div className='A-O'>
-                <input className='vocals' id="Button1" type="image" src={right} alt='' onClick={switchVisible} />
+                <input className='vocals' id="Button1" type="image" src={arrowD} alt='' onClick={switchVisible} />
             </div>
 
             <div className='esengmain'>

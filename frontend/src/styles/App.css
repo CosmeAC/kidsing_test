@@ -4,224 +4,185 @@
   padding: 0;
   font-family: 'Lato', sans-serif;
 }
+
+
+/* COLORES AHORA: 
+verde footer, vocales y nav rgb(46, 211, 0);
+sección letras: rgb(0, 199, 206) solid;
+sección números: rgb(190, 128, 226);
+sección global: rgb(255, 16, 135);
+Fondo main official:  rgb(221, 221, 221); 
+CARROT #ED694E
+LILA #A760F7
+TURQUESA #63D4E0
+VERDE #A2F760
+NARANJA FLOJO #EDBB5C */
+
+
 .root{
-  --color-bg: #ffebd2;
-  --color-bg: #ffebd2;
-  --color-bg-variant: ;
-  --color-primary: #7e0306;
+  /* --color-bg: #ffebd2; */
+  /* --color-bg-variant:; */
+  --color-primary: #2ed300 ;
   --color-primary-variant: #d53e0f;
   --transition: all 400ms ease;
   --color-white: #fff;
+  --color-green: #a1f064;
+  --color-h1:#a1f064;
+  --color-vocals: #2ed300;
+  --color-global: #ff1087;
+  --color-number: #be80e2;
+  --color-alphabhet: #00c7ce;
   --color-black: rgb(5, 5, 5);
 }
+
 .App{
   background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
   /* background-color: #fffefe; */
   /* color: var(--color-white); */
+  /* font-size: xx-large;
+
+  font:700; */
+}
+
+.bodymain{
+  background-color: #A760F7;
+}
+
+.Main{
+  display: flex;
 }
 
 .Title h1{
   color: rgb(5, 5, 5);
 }
 
-/*---------------------------HEADER-------------------------*/
-/* .Header-main{
-  background-color: rgb(0, 70, 211);
-  width: 100%;
-  height: 4.3rem;
-  display:flex;
-  align-items: center;
-  justify-content: space-around;
-  margin:0;
-  padding:0;
-} */
 
 /*---------------------------ABOUT---------------------------*/
 
-.about{
+.about {
+  /* margin-top: 30%; */
   display: flex;
   flex-direction: column;
+  /* border: black 1px solid; */
+  border-radius: 10px 10px 10px 10px;
   text-align: justify;
   padding: 5% 10% 5% 18%;
+  gap: 8%;  
+  color: #a1f064;;
 }
 
 
-/*---------------------------HOME---------------------------*/
+.about-content{
+  display: flex;
+  flex-direction: row;
+  margin-top: 3%;
+}
 
-.home h2{
+#aboutcohete, #aboutsign, #aboutbook{
+  height: 60px;
+  width: auto;
+}
+.h2about, .pabout{
+  display: flex;
+  color: black;
+  font-size: x-large;
+}
+
+.aboutimgcontainer{
+  height: 100px;
+  width: 100px;
+  border: #ff881b 1px solid;
+  background-color: #ff881b;
+  border-radius: 20px 20px 20px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  /* color: white; */
-  color: rgb(5, 5, 5);
 }
 
-#monosonriente{
-  width: 400px;
-  height: 300px;
+.aboutuspart{
+  display: flex;
+  align-self: center;
+  font-size:x-large;
+  justify-self: start;
+  color: black;
+  font-family: 'Raleway',sans-serif; 
+  font-weight: 800; 
+  line-height: 72px; 
+  text-align: start; 
+  margin-bottom: 5%;
+  text-transform: uppercase; 
 }
+
+.aboutcontent{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: black;
+  font-size: x-large;
+}
+
+.abouttext{
+  display: flex;
+  flex-direction: column;
+  font-size: xx-large;
+}
+
+p{
+  font-size: x-large;
+}
+
+/*---------------------------HOME---------------------------*/
+
+/* .home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  margin-top: 150px;
+  align-content: center;
+  text-align: center;
+  color: rgb(5, 5, 5);
+  
+}
+
+.home-items{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8%;
+}
+
+#verdetrans{
+
+  width: auto;
+  height: 800px;
+  right: 200px;
+
+} */
 
 
 /*---------------------------FOOTER-------------------------*/
 .Footer{
-  background-color:rgb(46, 211, 0);
+  background-color:#ff881b;
   width: 100%;
-  height: 4.3rem;
+  height: 150px;
   display:flex;
   align-items: center;
-  justify-content: space-around;
   margin:0;
   padding:0;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-.home{
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  justify-content: center;
-  align-items: center;
-  height: 500px;
-}
 
-.home-items{
-  display: flex;
-  margin-top: 5%;
-  margin: 2%;
-}
-
-.team{
-  color: blue;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 3rem;
-  border: 1px solid black;
-  gap: 2%;
-
-}
-
-.about{
-  color: white;
-}
 
 /*-----------------TEAM---------------*/
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-body {
-  background-color: #f5f5f5;
-}
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2em 1em;
-  text-align: center;
-  color: white;
-}
-.column {
-  width: 100%;
-  padding: 0.5em 0;
-}
-h1 {
-  width: 100%;
-  text-align: center;
-  font-size: 3.5em;
-  color: #ffffff;
-}
-.card {
-  box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.1);
-  padding: 3.5em 1em;
-  border-radius: 0.6em;
-  color: #1f003b;
-  cursor: pointer;
-  transition: 0.3s;
-  background-color: #ffffff;
-}
-.card .img-container {
-  width: 8em;
-  height: 8em;
-  background-color: #294ef5;
-  /* var(--color-bg); */
-  padding: 0.5em;
-  border-radius: 50%;
-  margin: 0 auto 2em auto;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 50%;
-}
-img.container{
-  object-fit: contain;
-}
-
-#eric{
-  height: 100%;
-  width: 130px;
-}
-
-.img-container{
-  object-fit: contain;
-}
-.card h3 {
-  font-weight: 500;
-}
-.card p {
-  font-weight: 300;
-  text-transform: uppercase;
-  margin: 0.5em 0 2em 0;
-  letter-spacing: 2px;
-}
-.icons {
-  width: 50%;
-  min-width: 180px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-}
-.card a {
-  text-decoration: none;
-  color: inherit;
-  font-size: 1.4em;
-}
-.card:hover {
-  background: linear-gradient(#411bff, #5126ff);
-  color: #ffffff;
-}
-.card:hover .img-container {
-  transform: scale(1.15);
-}
-@media screen and (min-width: 768px) {
-  section {
-    padding: 1em 7em;
-  }
-}
-@media screen and (min-width: 992px) {
-  section {
-    padding: 1em;
-  }
-  .card {
-    padding: 5em 1em;
-  }
-  .column {
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
-    padding: 0 1em;
-  }
-}
 
 
 /*---------------SECTION-1------------*/
 
-.esengmain{
+/* .esengmain{
   display: flex;
   border: 1px black;
   height: 50px;
@@ -274,16 +235,138 @@ img.container{
 }
 #eightsign, #eight, #one, #onesign{
   height: 243px;
+} */
+
+/*-----------------------------------*/
+
+ /* .esengmain{
+  display: flex;
+  position: absolute;
+  top:10px;
+  right:10px;
+  border: 1px black;
+  height: 50px;
 }
 
-
-/*-----------------SECTION NUMBERS ------------*/
-
-.section-numbers{
+.section-container{
   display: flex;
+  position: relative;
   justify-content: center;
   border: 1px white solid;
   border-radius: 20px 20px 20px 20px;
   background-color: white;
   margin: 10%;
+  gap: 5%;
 }
+
+.A-O,.A-E{
+  display: flex;
+  flex-direction: row;
+  margin-top: 15%;
+  margin-bottom: 15%;
+  gap: 5%;
+}
+
+.A-Z{
+  display: flex;
+  flex-direction: row;
+  margin-top: 15%;
+  margin-bottom: 15%;
+  gap: 5%;
+}
+.arrowD {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input{
+  object-fit: contain;
+}
+
+#hsign{
+  width: 300px;
+}
+#gsign {
+  width: 300px;
+  height: 200px;
+}
+
+#ysign{
+  width: 243px;
+}
+
+#vocalA, #vocalE, #vocalI, #A,#asign, #B, #D, #E, #fsign, #I, #h ,#isign,#T,#R, #Rsign, #tsign, #S, #ssign, #vsign, #V, #W, #X, #xsign{
+  height: 243px;
+}
+#nsign, #msign,#lsign,#qsign, #bsign, #esign, #ksign, #rsign, #wsign, #ysign, #zsign{ 
+  height: 243px;
+
+}
+
+#usign{
+  height: 250px;
+}
+
+#psign{
+  width: 300px;
+  height: 200px;
+} */ */
+
+
+/*-----------------SECTION NUMBERS ------------*/
+
+ .esengmain{
+  display: flex;
+  position: absolute;
+  top:10px;
+  right:10px;
+  border: 1px black;
+  height: 50px;
+}
+
+.section-numbers{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  border: 1px white solid;
+  border-radius: 20px 20px 20px 20px;
+  background-color: white;
+  gap: 15%;
+  /* justify-content: space-between; */
+
+  /* display: flex;
+  position: relative;
+  justify-content: center;
+  border: 1px black ;
+
+  border-radius: 20px 20px 20px 20px;
+  background-color: white;
+  height: 100%;
+  width: auto;
+  gap: 5%; */
+
+}
+
+.A-Z{
+  display: flex;
+  flex-direction: row;
+  margin-top: 15%;
+  margin-bottom: 15%;
+  /* gap: 15 rem; */
+}
+
+.img-fixed {
+	object-fit: cover;
+	height: 180px;
+	width: 190px;
+}
+
+#eightsign, #eight, #one, #onesign, #two,  #twosign, #three, #threesign, #four, #foursign, #five, #fivesign{
+  height: 243px;
+}
+
+#zero, #zerosign, #zerowign, #seven, #sevensign,  #nine, #ninesign, #six, #sixsign{
+  height: 243px;
+}
+

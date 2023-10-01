@@ -1,16 +1,51 @@
 .Navbar {
-    background-color:rgb(46, 211, 0);
-    color: white;
-    height: 4.3rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2%;
-  }
-
-#profile{
-  margin-right: 10%;
+  position: relative;
+  background-color: #ff881b;
+  color: white;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 2%;
+  font-size: xx-large;
 }
 
+#profilebtn{
+display: flex;
+position: absolute;
+  right: 80px;
+  height: 50px;
+  width: auto;
 
+  
+}
+
+.languagebtn-container{
+  position: absolute;
+  display: flex;
+  align-self: center;
+  left: 15px;
+
+}
+
+.cool-link {
+  display: inline-block;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.cool-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: width .3s;
+}
+
+.cool-link:hover::after {
+  width: 100%;
+  transition: width .3s;
+}

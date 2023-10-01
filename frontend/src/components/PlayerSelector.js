@@ -58,12 +58,6 @@ function PlayerSelector() {
         {isAuthenticated ? (
         <div className="body">
             <div className="containerPlayer">
-                {/* <input
-                            type="file"
-                            accept="image/*"
-                            onChange={handleImageUpload}
-                        /> */}
-
                 <div className="btns2">
                     <div className="player">
                         <label>Name:</label>
@@ -75,17 +69,7 @@ function PlayerSelector() {
                     <button onClick={continuar} className="continuar">Continuar</button>
                 </div>
                 <div className="box" style={{ transform: `perspective(1000px) rotateY(${degrees}deg)` }}>
-                    {/* <span onClick={() => setSelectedImage("../../public/AvatarPerfil/1.jpg")}><img src={require("../../public/AvatarPerfil/1.jpg")}></img></span>
-                    <span onClick={() => setSelectedImage("../../public/AvatarPerfil/2.jpg")}><img src={require("../../public/AvatarPerfil/2.jpg")}></img></span>
-                    <span onClick={() => setSelectedImage("../../public/AvatarPerfil/3.jpg")}><img src={require("../../public/AvatarPerfil/3.jpg")}></img></span>
-                    <span onClick={() => setSelectedImage("../../public/AvatarPerfil/4.jpg")}><img src={require("../../public/AvatarPerfil/4.jpg")}></img></span>
-                    <span onClick={() => setSelectedImage("../../public/AvatarPerfil/5.jpg")}><img src={require("../../public/AvatarPerfil/5.jpg")}></img></span>
-                    <span onClick={() => setSelectedImage("../../public/AvatarPerfil/6.jpg")}><img src={require("../../public/AvatarPerfil/6.jpg")}></img></span>
-                    <span onClick={() => setSelectedImage("../../public/AvatarPerfil/7.jpg")}><img src={require("../../public/AvatarPerfil/7.jpg")}></img></span>
-                    <span onClick={() => setSelectedImage("../../public/AvatarPerfil/8.jpg")}><img src={require("../../public/AvatarPerfil/8.jpg")}></img></span>
-                    <span onClick={() => setSelectedImage("../../public/AvatarPerfil/9.jpg")}><img src={require("../../public/AvatarPerfil/9.jpg")}></img></span>
-                    <span onClick={() => setSelectedImage("../../public/AvatarPerfil/10.jpg")}><img src={require("../../public/AvatarPerfil/10.jpg")}></img></span> */}
-
+                    
                     <span onClick={() => setSelectedImage("/avatar/1.jpg")}><img src={"/avatar/1.jpg"}></img></span>
                     <span onClick={() => setSelectedImage("/avatar/2.jpg")}><img src={"avatar/2.jpg"}></img></span>
                     <span onClick={() => setSelectedImage("/avatar/3.jpg")}><img src={"avatar/3.jpg"}></img></span>

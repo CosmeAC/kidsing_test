@@ -1,0 +1,39 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin-top: 150px;
+    align-content: center;
+    text-align: center;
+    color: rgb(5, 5, 5);
+    
+  }
+  
+  .home-items{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    margin-bottom: 8%;
+  }
+  
+  #verdetrans{
+    width: auto;
+    height: 800px;
+    right: 200px;
+  
+  }
+
+  .carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    overflow: hidden;
+  }
+
+  /* .w-full{
+    height: 700px;
+    width: auto;
+    object-fit: contain;
+  } */    

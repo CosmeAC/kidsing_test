@@ -1,14 +1,14 @@
 import React from 'react';
-import '../../styles/App.css';
+import '../../styles/Team.css';
 import foto from '../../assets/foto.jpg';
-import erizo from '../../assets/avatar/erizo.jpg';
-import girafa from '../../assets/avatar/girafa.jpg';
+import alex from '../../assets/Alex_Cosme.jpg';
+import saira from '../../assets/IMG_8058_Facetune_19-01-2019-19-13-59.jpg';
 
-export const Team = () => {
+const Team = () => {
   return (
     <div className='team-container' id='Team'>
       <div class="row">
-        <h1>Our Team</h1>
+        <h1>OUR TEAM</h1>
       </div>
       <div class="row">
         {/* //*-- Column 1-// */}
@@ -25,7 +25,7 @@ export const Team = () => {
         <div class="column">
           <div class="card">
             <div class="img-container">
-              <img src={erizo} alt='' id='alex'/>
+              <img src={alex} alt='' id='alex'/>
             </div>
             <h3>Alex</h3>
             <p>Backend Developer</p>
@@ -35,7 +35,7 @@ export const Team = () => {
         <div class="column">
           <div class="card">
             <div class="img-container">
-              <img src={girafa} alt='' id='saira'/>
+              <img src={saira} alt='' id='saira'/>
             </div>
             <h3>Saira</h3>
             <p> Frontend Developer</p>

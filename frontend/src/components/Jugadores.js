@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import axios from 'axios';
 import '../styles/Jugadores.css';
+import adbtn from '../assets/addboton.png';
 
   const Jugadores  = () => {
     const { user, isAuthenticated } = useAuth0(); 
@@ -32,8 +33,8 @@ import '../styles/Jugadores.css';
         });
       }
     }, [user, isAuthenticated]);
-
     const bodyJugadoresClass = `bodyJugadores ${coloresFondo[backgroundColorIndex]}`;
+    
 
     return (
 
@@ -45,8 +46,7 @@ import '../styles/Jugadores.css';
           player.jugadorId.map((jugador, index) => (
             <Link to="/Officialpage"><li key={index}>
 
-              <img className='imgJugadores' src={jugador.imagen} onMouseEnter={cambiarFondo} ></img>
-              
+              <img className='imgJugadores' src={jugador.imagen} alt='' onMouseEnter={cambiarFondo} ></img>
               <p className='Njugadores'>{jugador.username}</p>
             </li></Link>
           ))
@@ -56,7 +56,7 @@ import '../styles/Jugadores.css';
       </ul>
         <div className='divCrearJugador'>
           <Link to="/PlayerSelector">
-            <button className='btnCrearJugador'>+</button>
+            <button className='btnCrearJugador'><img src={adbtn}></img></button>
             <p className='Njugadores'>Añadir jugador</p>
             {/* <p>jugador</p> */}
           </Link>
